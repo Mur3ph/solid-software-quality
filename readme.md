@@ -56,6 +56,16 @@
 
 
 
+## Design Patterns
+1. [Strategy Pattern(Dependency Injection)](https://dzone.com/articles/java-the-strategy-pattern)
+2. [Observer Pattern(Event Listener)](https://dzone.com/articles/the-observer-pattern-using-modern-java)
+3. [Builder Pattern( While Writing Unit Tests )](https://stackoverflow.com/questions/5007355/builder-pattern-in-effective-java)
+4. [Factory Pattern(Web framewroks)](https://dzone.com/articles/java-the-factory-pattern)
+5. [Facade(REST)](https://dzone.com/articles/design-patterns-uncovered-1)
+6. [Singleton](https://stackoverflow.com/questions/70689/what-is-an-efficient-way-to-implement-a-singleton-pattern-in-java)
+
+
+
 ## Interesting Articles
 1. [10 Essential Unit and Integration #Testing #tools for #Java Programmers](http://javarevisited.blogspot.ie/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
 
