@@ -19,7 +19,7 @@ public class ModulusTest
 	}
 
 	@Test
-	public void getLastDigit()
+	public void getLastDigitTest()
 	{
 		int numberTest = 12345;
 		int lastDigitTest = numberTest%10;
@@ -28,5 +28,7 @@ public class ModulusTest
 		
 		System.out.println("Test Result: " + lastDigitTest + "\n" + "Method Result:" + modulus.getLastDigit(12345));
 	}
+	
+
 	
 }

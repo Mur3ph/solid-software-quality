@@ -8,6 +8,8 @@ public class RunTest
 		int number = 12345;
 		int lastDigit = number%10;
 		System.out.println("Result: " + lastDigit);
+		
+		System.out.println("Is number even: " + 3 % 2);
 	}
 	
 }

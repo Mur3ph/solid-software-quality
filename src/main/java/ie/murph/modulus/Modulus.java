@@ -8,4 +8,9 @@ public class Modulus
 		return number % 10;
 	}
 	
+	public boolean isNumberEven(int number)
+	{
+		return number % 2 == 0;
+	}
+	
 }
