@@ -13,4 +13,9 @@ public class Modulus
 		return number % 2 == 0;
 	}
 	
+	public boolean isNumberOdd(int number)
+	{
+		return number % 2 == 1;
+	}
+	
 }

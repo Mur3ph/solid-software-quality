@@ -78,8 +78,8 @@ public class ModulusTest
 		boolean isNumberOdd1 = oddNumber % 2 == 1;
 		boolean isNumberOdd2 = evenNumber % 2 == 1;
 		
-		assertEquals("Both are true, this will succeed", ifOddNumberTrue, modulus.isNumberEven(oddNumber));
-		assertEquals("Both are false, this will succeed", ifEvenNumberFalse, modulus.isNumberEven(evenNumber));
+		assertEquals("Both are true, this will succeed", ifOddNumberTrue, modulus.isNumberOdd(oddNumber));
+		assertEquals("Both are false, this will succeed", ifEvenNumberFalse, modulus.isNumberOdd(evenNumber));
 		
 	}
 	
