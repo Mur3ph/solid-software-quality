@@ -64,6 +64,22 @@ public class ModulusTest
 		assertFalse("This will succeed, boundary tests", modulus.isNumberEven(-1));
 		assertFalse("This will succeed, boundary tests", modulus.isNumberEven(999999999));
 		assertFalse("This will succeed, boundary tests", modulus.isNumberEven(-999999999));
+	}
+	
+	@Test
+	public void isNumberOddTest()
+	{
+		int evenNumber = 8;
+		int oddNumber = 7;
+		
+		boolean ifOddNumberTrue = true;
+		boolean ifEvenNumberFalse = false;
+		
+		boolean isNumberOdd1 = oddNumber % 2 == 1;
+		boolean isNumberOdd2 = evenNumber % 2 == 1;
+		
+		assertEquals("Both are true, this will succeed", ifOddNumberTrue, modulus.isNumberEven(oddNumber));
+		assertEquals("Both are false, this will succeed", ifEvenNumberFalse, modulus.isNumberEven(evenNumber));
 		
 	}
 	
