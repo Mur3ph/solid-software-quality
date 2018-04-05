@@ -9,7 +9,10 @@ public class RunTest
 		int lastDigit = number%10;
 		System.out.println("Result: " + lastDigit);
 		
-		System.out.println("Is number even: " + 3 % 2);
+		boolean isOdd = -1 % 2 == 1;
+		
+		System.out.println("Is number even " + 3 % 2);
+		System.out.println("Is number odd " + isOdd);
 	}
 	
 }

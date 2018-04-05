@@ -13,9 +13,10 @@ public class Modulus
 		return number % 2 == 0;
 	}
 	
+//	number % 2 == 1; was not allowing negative odd numbers
 	public boolean isNumberOdd(int number)
 	{
-		return number % 2 == 1;
+		return number % 2 != 0;
 	}
 	
 }
