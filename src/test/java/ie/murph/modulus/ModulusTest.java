@@ -1,6 +1,10 @@
 package test.java.ie.murph.modulus;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,11 +45,26 @@ public class ModulusTest
 		boolean isNumberEven1 = evenNumber % 2 == 0;
 		boolean isNumberEven2 = oddNumber % 2 == 0;
 		
-		assertEquals(ifEvenNumberTrue, modulus.isNumberEven(evenNumber));
-		assertEquals(ifOddNumberFalse, modulus.isNumberEven(oddNumber));
+		assertEquals("Both are true, this will succeed", ifEvenNumberTrue, modulus.isNumberEven(evenNumber));
+		assertEquals("Both are false, this will succeed", ifOddNumberFalse, modulus.isNumberEven(oddNumber));
 		
-		assertEquals(isNumberEven1, modulus.isNumberEven(evenNumber));
-		assertEquals(isNumberEven2, modulus.isNumberEven(oddNumber));
+		assertEquals("Both are true, this will succeed", isNumberEven1, modulus.isNumberEven(evenNumber));
+		assertEquals("Both are false, this will succeed", isNumberEven2, modulus.isNumberEven(oddNumber));
+		
+		assertTrue("This will succeed, it is an even number being passed", modulus.isNumberEven(evenNumber));
+		assertFalse("This will succeed, it is an odd number being passed", modulus.isNumberEven(oddNumber));
+		
+		assertSame(isNumberEven1, modulus.isNumberEven(evenNumber));
+		assertNotSame(isNumberEven2, modulus.isNumberEven(evenNumber));
+		
+//		Boundary tests..
+		assertTrue("This will succeed, boundary tests", modulus.isNumberEven(0));
+		assertTrue("This will succeed, boundary tests", modulus.isNumberEven(1000000000));
+		assertTrue("This will succeed, boundary tests", modulus.isNumberEven(-1000000000));
+		assertFalse("This will succeed, boundary tests", modulus.isNumberEven(-1));
+		assertFalse("This will succeed, boundary tests", modulus.isNumberEven(999999999));
+		assertFalse("This will succeed, boundary tests", modulus.isNumberEven(-999999999));
+		
 	}
 	
 }
