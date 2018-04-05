@@ -33,12 +33,11 @@
 28. [Apache JMeter](http://jmeter.apache.org/)
 29. [GUI testing](https://www.qfs.de/en/qf-test/java-testing.html)
 30. [TestFX](https://github.com/TestFX/TestFX/wiki)
-31. [MSTest, JBehave, Karma, cURL, Protractor and Microsoft UI Automation]()
-32. [REST Assured]()
-33. [Spock Framework]()
-34. [Spring Test]()
-35. [DBUnit]()
-36. [Robot Framework]()
+31. [MSTest, JBehave, Karma, Protractor and Microsoft UI Automation]()
+32. [REST Assured](http://rest-assured.io/)
+33. [DBUnit](http://dbunit.sourceforge.net/)
+34. [cURL](https://curl.haxx.se/)
+
 
 
 
@@ -53,6 +52,9 @@
 
 ## Frameworks (A framework is simply a set of libraries that are used to develop code on a particular platform or on multiple platforms)
 1. [Selenium (Selenium automates browsers) - Selenium IDE, Selenium WebDriver, Selenium client API, Selenium Grid, Selendroid, Appium](http://www.seleniumhq.org/)
+2. [Spock Framework](http://spockframework.org/)
+3. [Spring Test](https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html)
+4. [Robot Framework](http://robotframework.org/)
 
 
 
