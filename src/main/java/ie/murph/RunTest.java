@@ -1,5 +1,7 @@
 package main.java.ie.murph;
 
+import main.java.ie.murph.modulus.PrimeNumber;
+
 public class RunTest
 {
 
@@ -13,6 +15,9 @@ public class RunTest
 		
 		System.out.println("Is number even " + 3 % 2);
 		System.out.println("Is number odd " + isOdd);
+		
+		PrimeNumber prime = new PrimeNumber();
+		System.out.println(prime.isPrime(101));
 	}
 	
 }
