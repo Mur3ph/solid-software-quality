@@ -1,6 +1,5 @@
 package main.java.ie.murph.modulus;
 
-import java.util.Arrays;
 
 public class PrimeNumber
 {
