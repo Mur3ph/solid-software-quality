@@ -3,14 +3,14 @@ package main.java.ie.murph.modulus;
 
 public class PrimeNumber
 {
-	public boolean isPrime1(int n) {
+	public boolean isPrime(int numberToCheckIfPrime) {
 	    // Two is the only even prime number, multiple of one and itself
-	    if (n%2==0) return true;
+	    if (numberToCheckIfPrime == 2) return true;
 	    
-	    //if not, then just check the odds
-	    for(int i=3;i<=n; i+=2) {
-	        if(n%i==0)
-	            return false;
+	    for(int iteration=2; iteration <= numberToCheckIfPrime/2; iteration++) {
+	        if(numberToCheckIfPrime % iteration == 0) {
+	        	 return false;
+	        }
 	    }
 	    return true;
 	}
@@ -42,14 +42,18 @@ public class PrimeNumber
 	}
 	
 //	Yet Even Faster than above method, not fully tested
-	public boolean isPrime(int n) {
+	public boolean isPrime4(int n) 
+	{
 	    // Two is the only even prime number, multiple of one and itself
-	    if (n%2==0) return true;
+	    if (n==2) return true;
 	    
 	    //if not, then just check the odds
-	    for(int i=3;i*i<=n/2;i+=2) {
-	        if(n%i==0)
-	            return false;
+	    for(int i=3;i*i<=n/2;i+=2) 
+	    {
+	        if(n % i == 0)
+	        {
+	        	return false;
+	        }
 	    }
 	    return true;
 	}

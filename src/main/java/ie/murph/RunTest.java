@@ -4,6 +4,7 @@ import main.java.ie.murph.modulus.PrimeNumber;
 
 public class RunTest
 {
+	private static PrimeNumber primeNumber;
 
 	public static void main(String[] args)
 	{
@@ -16,8 +17,9 @@ public class RunTest
 		System.out.println("Is number even " + 3 % 2);
 		System.out.println("Is number odd " + isOdd);
 		
-		PrimeNumber prime = new PrimeNumber();
-		System.out.println(prime.isPrime(101));
+		primeNumber = new PrimeNumber();
+		System.out.println("Prime number 101: " + primeNumber.isPrime(101));
+		System.out.println("Prime number 4: " + primeNumber.isPrime(4));
 	}
 	
 }

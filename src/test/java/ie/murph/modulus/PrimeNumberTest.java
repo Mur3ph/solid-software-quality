@@ -1,6 +1,8 @@
 package test.java.ie.murph.modulus;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +22,13 @@ public class PrimeNumberTest
 	@Test
 	public void isPrimeTest()
 	{
-		assertEquals("Both are true, this will succeed", true, primeNumber.isPrime(2));
+		assertEquals("Test will succeed. Two is the only even prime number, multiple of one and itself", true, primeNumber.isPrime(2));
+		
+//		Boundary tests..
+		assertTrue("This will succeed, boundary tests", primeNumber.isPrime(1));
+		assertTrue("This will succeed, boundary tests", primeNumber.isPrime(2));
+		assertFalse("This will succeed, boundary tests", primeNumber.isPrime(4));
+		assertFalse("This will succeed, boundary tests", primeNumber.isPrime(0));
 	}
 
 }
