@@ -4,8 +4,8 @@ package main.java.ie.murph.modulus;
 public class PrimeNumber
 {
 	public boolean isPrime1(int n) {
-	    //check if n is a multiple of 2
-	    if (n%2==0) return false;
+	    // Two is the only even prime number, multiple of one and itself
+	    if (n%2==0) return true;
 	    
 	    //if not, then just check the odds
 	    for(int i=3;i<=n; i+=2) {
@@ -17,8 +17,8 @@ public class PrimeNumber
 	
 //	Faster than above method
 	public boolean isPrime2(int n) {
-	    //check if n is a multiple of 2
-	    if (n%2==0) return false;
+	    // Two is the only even prime number, multiple of one and itself
+	    if (n%2==0) return true;
 	    
 	    //if not, then just check the odds
 	    for(int i=3;i<=n/2; i+=2) {
@@ -30,8 +30,8 @@ public class PrimeNumber
 	
 //	Even Faster than above method
 	public boolean isPrime3(int n) {
-	    //check if n is a multiple of 2
-	    if (n%2==0) return false;
+	    // Two is the only even prime number, multiple of one and itself
+	    if (n%2==0) return true;
 	    
 	    //if not, then just check the odds
 	    for(int i=3;i*i<=n;i+=2) {
@@ -43,8 +43,8 @@ public class PrimeNumber
 	
 //	Yet Even Faster than above method, not fully tested
 	public boolean isPrime(int n) {
-	    //check if n is a multiple of 2
-	    if (n%2==0) return false;
+	    // Two is the only even prime number, multiple of one and itself
+	    if (n%2==0) return true;
 	    
 	    //if not, then just check the odds
 	    for(int i=3;i*i<=n/2;i+=2) {
