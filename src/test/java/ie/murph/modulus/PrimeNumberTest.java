@@ -22,13 +22,13 @@ public class PrimeNumberTest
 	@Test
 	public void isPrimeTest()
 	{
-		assertEquals("Test will succeed. Two is the only even prime number, multiple of one and itself", true, primeNumber.isPrime(2));
+		assertEquals("Test will succeed. Two is the only even prime number, multiple of one and itself", true, primeNumber.isIntegerAPrimeNumber(2));
 		
 //		Boundary tests..
-		assertTrue("This will succeed, boundary tests", primeNumber.isPrime(1));
-		assertTrue("This will succeed, boundary tests", primeNumber.isPrime(2));
-		assertFalse("This will succeed, boundary tests", primeNumber.isPrime(4));
-		assertFalse("This will succeed, boundary tests", primeNumber.isPrime(0));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(1));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(2));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(4));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(0));
 	}
 
 }

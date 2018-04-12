@@ -3,12 +3,12 @@ package main.java.ie.murph.modulus;
 
 public class PrimeNumber
 {
-	public boolean isPrime(int numberToCheckIfPrime) {
+	public boolean isIntegerAPrimeNumber(int numberToCheck) {
 	    // Two is the only even prime number, multiple of one and itself
-	    if (numberToCheckIfPrime == 2) return true;
+	    if (numberToCheck == 2) return true;
 	    
-	    for(int iteration=2; iteration <= numberToCheckIfPrime/2; iteration++) {
-	        if(numberToCheckIfPrime % iteration == 0) {
+	    for(int iteration = 2; iteration <= numberToCheck/2; iteration++) {
+	        if(numberToCheck % iteration == 0) {
 	        	 return false;
 	        }
 	    }

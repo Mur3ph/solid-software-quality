@@ -18,8 +18,8 @@ public class RunTest
 		System.out.println("Is number odd " + isOdd);
 		
 		primeNumber = new PrimeNumber();
-		System.out.println("Prime number 101: " + primeNumber.isPrime(101));
-		System.out.println("Prime number 4: " + primeNumber.isPrime(4));
+		System.out.println("Prime number 101: " + primeNumber.isIntegerAPrimeNumber(101));
+		System.out.println("Prime number 4: " + primeNumber.isIntegerAPrimeNumber(4));
 	}
 	
 }
