@@ -69,6 +69,11 @@
 
 
 
+## Design Principles
+1. [SOLID](https://dzone.com/search?page=1)
+
+
+
 ## Interesting Articles
 1. [10 Essential Unit and Integration #Testing #tools for #Java Programmers](http://javarevisited.blogspot.ie/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
 
