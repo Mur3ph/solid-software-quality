@@ -20,15 +20,33 @@ public class PrimeNumberTest
 	}
 
 	@Test
-	public void isPrimeTest()
+	public void isIntegerAPrimeNumber()
 	{
 		assertEquals("Test will succeed. Two is the only even prime number, multiple of one and itself", true, primeNumber.isIntegerAPrimeNumber(2));
 		
 //		Boundary tests..
-		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(1));
 		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(2));
-		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(4));
+		
 		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(0));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(1));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumber(4));
+	}
+	
+	@Test
+	public void isIntegerAPrimeNumberFasterTest()
+	{
+		assertEquals("Test will succeed. Two is the only even prime number, multiple of one and itself", true, primeNumber.isIntegerAPrimeNumberFaster(2));
+		
+//		Boundary tests..
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(2));
+		
+//		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(1));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(0));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(4));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(5));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(7));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(11));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(101));
 	}
 
 }
