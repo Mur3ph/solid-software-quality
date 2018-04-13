@@ -39,14 +39,31 @@ public class PrimeNumberTest
 		
 //		Boundary tests..
 		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(2));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(5));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(7));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(11));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(101));
 		
-//		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(1));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(1));
 		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(0));
 		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(4));
-		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(5));
-		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(7));
-		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(11));
-		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberFaster(101));
+	}
+	
+	@Test
+	public void isIntegerAPrimeNumberJava8Test()
+	{
+		assertEquals("Test will succeed. Two is the only even prime number, multiple of one and itself", true, primeNumber.isIntegerAPrimeNumberFaster(2));
+		
+//		Boundary tests..
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(2));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(5));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(7));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(11));
+		assertTrue("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(101));
+		
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(1));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(0));
+		assertFalse("This will succeed, boundary tests", primeNumber.isIntegerAPrimeNumberJava8(4));
 	}
 
 }

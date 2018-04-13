@@ -1,5 +1,6 @@
 package main.java.ie.murph.modulus;
 
+import java.util.stream.IntStream;
 
 public class PrimeNumber
 {
@@ -29,6 +30,13 @@ public class PrimeNumber
 	        }
 	    }
 	    return true;
+	}
+	
+	public boolean isIntegerAPrimeNumberJava8(int numberToCheck) {
+		if (lessThanTwo(numberToCheck)) return false;
+	    return IntStream.rangeClosed(2, (int) (Math.sqrt(numberToCheck)))
+	      .filter(n -> (n & 0X1) == 0)
+	      .allMatch(n -> numberToCheck % n != 0);
 	}
 	
 }
