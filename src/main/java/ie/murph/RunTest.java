@@ -37,6 +37,23 @@ public class RunTest
 		System.out.println("isIntegerAPrimeNumberFaster: 14 " + primeNumber.isIntegerAPrimeNumberFaster(14));
 		System.out.println("isIntegerAPrimeNumberFaster: 101 " + primeNumber.isIntegerAPrimeNumberFaster(101));
 		System.out.println("isIntegerAPrimeNumberFaster: 102 " + primeNumber.isIntegerAPrimeNumberFaster(102));
+		
+		System.out.println(" ");
+		
+//		isIntegerAPrimeNumberJava8
+		System.out.println("isIntegerAPrimeNumberJava8: 0 " + primeNumber.isIntegerAPrimeNumberJava8(0));
+		System.out.println("isIntegerAPrimeNumberJava8: 1 " + primeNumber.isIntegerAPrimeNumberJava8(1));
+		System.out.println("isIntegerAPrimeNumberJava8: 2 " + primeNumber.isIntegerAPrimeNumberJava8(2));
+		System.out.println("isIntegerAPrimeNumberJava8: 4 " + primeNumber.isIntegerAPrimeNumberJava8(4));
+		
+		System.out.println("isIntegerAPrimeNumberJava8: 5 " + primeNumber.isIntegerAPrimeNumberJava8(5));
+		System.out.println("isIntegerAPrimeNumberJava8: 6 " + primeNumber.isIntegerAPrimeNumberJava8(6));
+		System.out.println("isIntegerAPrimeNumberJava8: 7 " + primeNumber.isIntegerAPrimeNumberJava8(7));
+		System.out.println("isIntegerAPrimeNumberJava8: 10 " + primeNumber.isIntegerAPrimeNumberJava8(10));
+		System.out.println("isIntegerAPrimeNumberJava8: 11 " + primeNumber.isIntegerAPrimeNumberJava8(11));
+		System.out.println("isIntegerAPrimeNumberJava8: 14 " + primeNumber.isIntegerAPrimeNumberJava8(14));
+		System.out.println("isIntegerAPrimeNumberJava8: 101 " + primeNumber.isIntegerAPrimeNumberJava8(101));
+		System.out.println("isIntegerAPrimeNumberJava8: 102 " + primeNumber.isIntegerAPrimeNumberJava8(102));
 	}
 	
 }
