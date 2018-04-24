@@ -67,23 +67,27 @@
 9. Tools
   * [Online Web Scan Pen Test](https://pentest-tools.com/home)
   * [Iron Wasp](https://ironwasp.org/)
-  * [Web Application Security: ZAP](https://www.zaproxy.org/)
-  * [Infrastructure Security: Scout2](https://github.com/nccgroup/Scout2)
-  * [Infrastructure Security: Prowler](https://github.com/toniblyx/prowler)
-  * [Network Security: Telnet Open Port](https://en.wikipedia.org/wiki/Telnet)
-  * [Network Security: NMAP](https://nmap.org/)
-  * [Network Security: Wireshark](https://www.wireshark.org/)
-  * [Network Security: Cain and Able](https://en.wikipedia.org/wiki/Cain_and_Abel_(software))
-  * [SQL Injection: Blind Injection](https://www.owasp.org/index.php/Blind_SQL_Injection)
+  * Web Application Security
+    * [ZAP](https://www.zaproxy.org/)
+  * Infrastructure Security 
+    * [Scout2](https://github.com/nccgroup/Scout2)
+    * [Prowler](https://github.com/toniblyx/prowler)
+  * Network Security 
+    * [Telnet Open Port](https://en.wikipedia.org/wiki/Telnet)
+    * [NMAP](https://nmap.org/)
+    * [Wireshark](https://www.wireshark.org/)
+    * [Cain and Able](https://en.wikipedia.org/wiki/Cain_and_Abel_(software))
+  * SQL Injection
+    * [Blind Injection](https://www.owasp.org/index.php/Blind_SQL_Injection)
     * [Error Messages](http://www.pigadas.com/blog/2011/07/24/error-based-sql-injection-in-oracle-11g/)
 	* [Tautology Based Injection](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5375870&url=http://ieeexplore.ieee.org/iel5/5375735/5375746/05375870.pdf?arnumber=5375870)
-	* [Tool: Wapiti](http://sourceforge.net/projects/wapiti/)
-	* [Tool: Skipfish](http://code.google.com/p/skipfish/)
-	* [Tool: Sitewatch]()
-	
+	  * [Tool: Wapiti](http://sourceforge.net/projects/wapiti/)
+	  * [Tool: Skipfish](http://code.google.com/p/skipfish/)
+	  * [Tool: Sitewatch]()
 
 
-### Monitoring and Performance tools
+
+## Monitoring and Performance tools
 1. [JConsole (Packaged with JDK)](https://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html)
 2. [Apache JMeter](http://jmeter.apache.org/)
 3. [Java Performance Optimization](https://dzone.com/refcardz/java-performance-optimization)
