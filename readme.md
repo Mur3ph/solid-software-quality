@@ -76,6 +76,7 @@
 
 ## Interesting Articles
 1. [10 Essential Unit and Integration #Testing #tools for #Java Programmers](http://javarevisited.blogspot.ie/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+2. [**Must Read, Great Read**: Software Testing Anti-patterns](http://blog.codepipes.com/testing/software-testing-antipatterns.html#anti-pattern-1---having-unit-tests-without-integration-tests)
 
 
 
