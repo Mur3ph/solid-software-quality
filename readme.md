@@ -74,6 +74,9 @@
   * [Network Security: NMAP](https://nmap.org/)
   * [Network Security: Wireshark](https://www.wireshark.org/)
   * [Network Security: Cain and Able](https://en.wikipedia.org/wiki/Cain_and_Abel_(software))
+  * [SQL Injection: Blind Injection](https://www.owasp.org/index.php/Blind_SQL_Injection)
+    * [Error Messages](http://www.pigadas.com/blog/2011/07/24/error-based-sql-injection-in-oracle-11g/)
+	* [Tautology Based Injection](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5375870&url=http://ieeexplore.ieee.org/iel5/5375735/5375746/05375870.pdf?arnumber=5375870)
 
 
 
