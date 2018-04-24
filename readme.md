@@ -4,7 +4,7 @@
 
 ## Software Quality & Testing techniques
 1. [Selenium(Selenium automates browsers) - Selenium IDE, Selenium WebDriver, Selenium client API, Selenium Grid, Selendroid, Appium](http://www.seleniumhq.org/)
-2. [Unit Testing (not really testing) - JUnit, NUnit etc.](https://en.wikipedia.org/wiki/Unit_testing)
+2. [Unit Testing - JUnit, NUnit etc.](https://en.wikipedia.org/wiki/Unit_testing)
 3. [Mutation testing(Tests your test suite rather than your application. Introducing small errors (called mutations) into your application (errors that are not supposed to fix bugs or provide new functionality) to see if your test suite picks them up)](https://en.wikipedia.org/wiki/Mutation_testing)
 4. [Mockito](http://site.mockito.org/)
 5. [SoapUI (REST & SOAP Testing Tool)](https://www.soapui.org/)
@@ -39,6 +39,41 @@
 34. [cURL](https://curl.haxx.se/)
 35. [Arquillian](http://arquillian.org/)
 
+
+
+## Penetration Security Testing
+
+   [Ethical Hacking](https://www.tutorialspoint.com/ethical_hacking/ethical_hacking_overview.htm): Ethical hacking is legal since the purpose is to find weakness in the system or network. It recovers lost information, especially in case you lost your password and puts adequate preventative measures in place to prevent security breaches.
+
+   [Penetration testing](http://en.wikipedia.org/wiki/Penetration_test): Penetration testing try to exploit the vulnerabilities in a system. Penetration testing involves network penetration testing and application security testing. It also controls and processes around the networks and applications.
+
+1. [Penetration Testing (Pen-Testing)](http://www.softwaretestinghelp.com/penetration-testing-guide/)
+2. [Source Code Analysis (A.K.A. Static Code Analysis)](https://www.owasp.org/index.php/Static_Code_Analysis)
+3. [Testing for Denial of Service](https://www.owasp.org/index.php/Testing_for_Denial_of_Service)
+4. [Cloud-based Security](https://techbeacon.com/pen-testing-cloud-based-apps-step-step-guide)
+5. [Network Security](https://en.wikipedia.org/wiki/Network_security)
+6. [Infrastructure Security](https://www.techotopia.com/index.php/IT_Infrastructure_Security)
+7. [Web Application Security](https://en.wikipedia.org/wiki/Web_application_security)
+8. [Mobile Security](https://en.wikipedia.org/wiki/Mobile_security)
+
+   [Penetration testing](http://en.wikipedia.org/wiki/Penetration_test) is a usually a form of [black box](http://en.wikipedia.org/wiki/Black-box_testing) security testing. In a pen test you are trying to break into the server as many times as possible and report back on how they where able to break in. This is often done multiple times to make sure that the patches hold water. This is an important type of security testing because its as real world as it gets. Regular penetration testing is a requirement of the PCI-[DSS](http://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard). Common tools for web application penetration testing are [Acunetix](http://www.acunetix.com/)($), NTOSpider($$$), w3af(open source) and Wapiti(Open Source). For other types of penetration testing it is common to use [Metasploit](http://www.metasploit.com/)(open source), [OpenVAS](http://www.openvas.org/)(open source), NMAP and THC-Hydra.
+
+   By contrast in it [white box](http://en.wikipedia.org/wiki/White-box_testing) testing you have full access to the source code. You can enable drugging on the application to get better test results from scanners like Acuenetix. You can also use Source Code Analysis Tools such as [RATS](http://www.fortify.com/security-resources/rats.jsp)(Open Source) and [Coverity](http://www.coverity.com/)($$$$$).
+   
+   There are 2 different forms of Denial Of Service attacks. The most simple is a Distributed Denial of service attack in which the hacker is using a bot net to flood your server with traffic. This traffic could be an ICMP Ping, or even a simple HTTP GET request. Cisco has a number of [very expensive products](http://www.cisco.com/en/US/tech/tk59/technologies_white_paper09186a0080174a5b.shtml) to help prevent this type of attack.
+
+   Another form of Denial Of Service is when there is a problem with the server its self. When this type of security flaws are found its often given a CVE number becuase it is a violation of [CWE-400](http://cwe.mitre.org/data/definitions/400.html). This is commonly due to an arithmetic overflow or stack/heap based memory corruption (a buffer overflow or dangling pointer). To prevent these types of attacks you should make sure that your software is up to date. Its not often that an 0-day DoS attack is used in the wild.
+
+9. Tools
+  * [Online Web Scan Pen Test](https://pentest-tools.com/home)
+  * [Iron Wasp](https://ironwasp.org/)
+  * [Web Application Security: ZAP](https://www.zaproxy.org/)
+  * [Infrastructure Security: Scout2](https://github.com/nccgroup/Scout2)
+  * [Infrastructure Security: Prowler](https://github.com/toniblyx/prowler)
+  * [Network Security: Telnet Open Port](https://en.wikipedia.org/wiki/Telnet)
+  * [Network Security: NMAP](https://nmap.org/)
+  * [Network Security: Wireshark](https://www.wireshark.org/)
+  * [Network Security: Cain and Able](https://en.wikipedia.org/wiki/Cain_and_Abel_(software))
 
 
 
@@ -77,6 +112,8 @@
 ## Interesting Articles
 1. [10 Essential Unit and Integration #Testing #tools for #Java Programmers](http://javarevisited.blogspot.ie/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
 2. [**Must Read, Great Read**: Software Testing Anti-patterns](http://blog.codepipes.com/testing/software-testing-antipatterns.html#anti-pattern-1---having-unit-tests-without-integration-tests)
+3. [Application Security Testing on Cloud and the Future of Penetration Testing](https://securityintelligence.com/application-security-testing-on-cloud-and-the-future-of-penetration-testing/)
+4. [37 Most Powerful Penetration Testing Tools (Security Testing Tools)](http://www.softwaretestinghelp.com/penetration-testing-tools/)
 
 
 
