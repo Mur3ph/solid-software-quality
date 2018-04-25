@@ -47,6 +47,7 @@
 33. [DBUnit](http://dbunit.sourceforge.net/)
 34. [cURL](https://curl.haxx.se/)
 35. [Arquillian](http://arquillian.org/)
+36. [Cypress](https://www.cypress.io/)
 
 
 
