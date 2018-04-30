@@ -133,6 +133,7 @@
 2. [**Must Read, Great Read**: Software Testing Anti-patterns](http://blog.codepipes.com/testing/software-testing-antipatterns.html#anti-pattern-1---having-unit-tests-without-integration-tests)
 3. [Application Security Testing on Cloud and the Future of Penetration Testing](https://securityintelligence.com/application-security-testing-on-cloud-and-the-future-of-penetration-testing/)
 4. [37 Most Powerful Penetration Testing Tools (Security Testing Tools)](http://www.softwaretestinghelp.com/penetration-testing-tools/)
+5. [Fundamentals of Testing](https://drive.google.com/file/d/1FU-qwuNnUyuhh_ABqqeXPcwAYVgn1D2X/view)
 
 
 
