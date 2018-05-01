@@ -120,6 +120,7 @@
 4. [Factory Pattern(Web framewroks)](https://dzone.com/articles/java-the-factory-pattern)
 5. [Facade(REST)](https://dzone.com/articles/design-patterns-uncovered-1)
 6. [Singleton](https://stackoverflow.com/questions/70689/what-is-an-efficient-way-to-implement-a-singleton-pattern-in-java)
+7. [Software Testing Anti-patterns](http://blog.codepipes.com/testing/software-testing-antipatterns.html)
 
 
 
