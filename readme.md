@@ -138,11 +138,19 @@
 6. [Using Mockito with JUnit 5](https://igorski.co/java/junit/mockito-with-junit5/)
 
 
+## Video
+1. [Simon Stewart, Selenium State of the Union](https://www.youtube.com/watch?v=5o6Rb8W9_Do&feature=youtu.be&t=28m39s)
+
+
 
 ## Books
 1. [Growing Object-Oriented Software, Guided by Tests (Beck Signature)](https://www.amazon.co.uk/dp/0321503627/ref=as_li_qf_asin_il_tl?slotNum=3&ie=UTF8&linkCode=g12&linkId=58eb6083d58d6083419861c746c38e5c&imprToken=mOhjztiRSLnz68HXLBjBVA&creativeASIN=0321503627&tag=sandordargo-21&creative=9325)
+2. [Selenium Design Patterns and Best Practices](https://www.amazon.com/Selenium-Design-Patterns-Best-Practices/dp/1783982705)
 
 
 
 ## Certification
 1. [ISTQB foundation level](https://www.istqb.org/certification-path-root/foundation-level/foundation-level-in-a-nutshell.html)
+2. [ISTQB sample papers](https://drive.google.com/file/d/0B4_lHtwH2YI0d05mTVVYVl9XM1E/view)
+
+
