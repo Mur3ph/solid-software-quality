@@ -48,6 +48,7 @@
 34. [cURL](https://curl.haxx.se/)
 35. [Arquillian](http://arquillian.org/)
 36. [Cypress](https://www.cypress.io/)
+37. [QTP (Automated Functional Testing tool)](https://www.guru99.com/quick-test-professional-qtp-tutorial-1.html)
 
 
 
@@ -136,16 +137,19 @@
 4. [37 Most Powerful Penetration Testing Tools (Security Testing Tools)](http://www.softwaretestinghelp.com/penetration-testing-tools/)
 5. [Fundamentals of Testing](https://drive.google.com/file/d/1FU-qwuNnUyuhh_ABqqeXPcwAYVgn1D2X/view)
 6. [Using Mockito with JUnit 5](https://igorski.co/java/junit/mockito-with-junit5/)
+7. [Test automation training is broken. Here's how to fix it](https://techbeacon.com/test-automation-training-broken-heres-how-fix-it?utm_source=newsletter&utm_medium=email&utm_campaign=tbnewsletter135)
 
 
 ## Video
-1. [Simon Stewart, Selenium State of the Union](https://www.youtube.com/watch?v=5o6Rb8W9_Do&feature=youtu.be&t=28m39s)
+1. [Simon Stewart, Selenium State of the Union  (Youtube)](https://www.youtube.com/watch?v=5o6Rb8W9_Do&feature=youtu.be&t=28m39s)
+2. [ToolsQA (Youtube)](https://www.youtube.com/channel/UCSVljVzYbFphBtHvJgwMLsg/videos)
 
 
 
 ## Books
 1. [Growing Object-Oriented Software, Guided by Tests (Beck Signature)](https://www.amazon.co.uk/dp/0321503627/ref=as_li_qf_asin_il_tl?slotNum=3&ie=UTF8&linkCode=g12&linkId=58eb6083d58d6083419861c746c38e5c&imprToken=mOhjztiRSLnz68HXLBjBVA&creativeASIN=0321503627&tag=sandordargo-21&creative=9325)
 2. [Selenium Design Patterns and Best Practices](https://www.amazon.com/Selenium-Design-Patterns-Best-Practices/dp/1783982705)
+3. [Pragmatic Unit Testing in Java with JUnit](ftp://ftp.borg.moe/yarr/Gentoomen%20Library/Programming/Pragmatic%20Programmers/Pragmatic%20Unit%20Testing%20in%20Java%20with%20JUnit.pdf)
 
 
 
