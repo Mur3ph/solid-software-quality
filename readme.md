@@ -49,6 +49,7 @@
 35. [Arquillian](http://arquillian.org/)
 36. [Cypress](https://www.cypress.io/)
 37. [QTP (Automated Functional Testing tool)](https://www.guru99.com/quick-test-professional-qtp-tutorial-1.html)
+38. [Capybara (Web-based test automation software that simulates scenarios for user stories)](https://github.com/teamcapybara/capybara)
 
 
 
