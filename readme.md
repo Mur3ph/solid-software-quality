@@ -51,7 +51,7 @@
 37. [QTP (Automated Functional Testing tool)](https://www.guru99.com/quick-test-professional-qtp-tutorial-1.html)
 38. [Capybara (Web-based test automation software that simulates scenarios for user stories)](https://github.com/teamcapybara/capybara)
 39. [Fundamentals of software testing and quality](https://www.google.com/search?q=fundamentals+of+software+testing+and+quality&ie=utf-8&oe=utf-8&client=firefox-b-ab)
-40. []()
+40. [Logs](https://12factor.net/logs)
 
 
 
