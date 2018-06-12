@@ -116,6 +116,8 @@
 5. [Fundamentals of Testing](https://drive.google.com/file/d/1FU-qwuNnUyuhh_ABqqeXPcwAYVgn1D2X/view)
 6. [Using Mockito with JUnit 5](https://igorski.co/java/junit/mockito-with-junit5/)
 7. [Test automation training is broken. Here's how to fix it](https://techbeacon.com/test-automation-training-broken-heres-how-fix-it?utm_source=newsletter&utm_medium=email&utm_campaign=tbnewsletter135)
+8. [Software testing as a career](https://www.guru99.com/software-testing-career-complete-guide.html)
+
 
 
 ## Video
