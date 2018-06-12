@@ -53,6 +53,8 @@
 39. [Fundamentals of software testing and quality](https://www.google.com/search?q=fundamentals+of+software+testing+and+quality&ie=utf-8&oe=utf-8&client=firefox-b-ab)
 40. [Logs](https://12factor.net/logs)
 41. [Test Containers](http://www.java-allandsundry.com/2018/05/testcontainers-and-spring-boot.html)
+41. [WireMock](https://www.petrikainulainen.net/programming/testing/wiremock-tutorial-request-matching-part-one/?utm_source=twitter&utm_medium=social&utm_campaign=new-blog-post)
+42. []()
 
 
 
