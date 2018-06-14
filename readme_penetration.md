@@ -40,3 +40,13 @@
 	  * [Tool: Wapiti](http://sourceforge.net/projects/wapiti/)
 	  * [Tool: Skipfish](http://code.google.com/p/skipfish/)
 	  * [Tool: Sitewatch]()
+	  
+
+	  
+## Books and reading 
+1. [Erickson's Hacking: The Art of Exploitation](http://rads.stackoverflow.com/amzn/click/1593271441)
+2. [Fyodor's own Nmap Network Scanning](http://rads.stackoverflow.com/amzn/click/0979958717)
+3. [The Web Application Hacker's Handbook](http://rads.stackoverflow.com/amzn/click/1118026470)
+4. [A Guide to Kernel Exploitation](http://rads.stackoverflow.com/amzn/click/1597494860)
+
+
