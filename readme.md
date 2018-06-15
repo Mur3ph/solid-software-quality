@@ -108,8 +108,9 @@
 
 
 
-## Tutorials
+## Tutorials & Training
 1. [Using Cucumber with Selenium](https://www.guru99.com/using-cucumber-selenium.html)
+2. [On Test Automation (Bas Dijkstra)](https://www.ontestautomation.com/training/)
 
 
 
