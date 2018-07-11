@@ -114,7 +114,7 @@
 
 
 
-## Interesting Articles
+## Interesting Articles % Sites
 1. [10 Essential Unit and Integration #Testing #tools for #Java Programmers](http://javarevisited.blogspot.ie/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
 2. [**Must Read, Great Read**: Software Testing Anti-patterns](http://blog.codepipes.com/testing/software-testing-antipatterns.html#anti-pattern-1---having-unit-tests-without-integration-tests)
 3. [Application Security Testing on Cloud and the Future of Penetration Testing](https://securityintelligence.com/application-security-testing-on-cloud-and-the-future-of-penetration-testing/)
@@ -123,6 +123,7 @@
 6. [Using Mockito with JUnit 5](https://igorski.co/java/junit/mockito-with-junit5/)
 7. [Test automation training is broken. Here's how to fix it](https://techbeacon.com/test-automation-training-broken-heres-how-fix-it?utm_source=newsletter&utm_medium=email&utm_campaign=tbnewsletter135)
 8. [Software testing as a career](https://www.guru99.com/software-testing-career-complete-guide.html)
+9. [Periodic Table of Testing](https://www.thebigtesttheory.com/?m=1)
 
 
 
