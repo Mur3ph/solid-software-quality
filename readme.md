@@ -111,6 +111,10 @@
 ## Tutorials & Training
 1. [Using Cucumber with Selenium](https://www.guru99.com/using-cucumber-selenium.html)
 2. [On Test Automation (Bas Dijkstra)](https://www.ontestautomation.com/training/)
+3. [Page Object Model (POM) & Page Factory in Selenium: Complete Tutorial](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html)
+4. [Understand Stub, Mock and Fake in Unit Testing (C#)](https://www.c-sharpcorner.com/UploadFile/dacca2/understand-stub-mock-and-fake-in-unit-testing/)
+5. [Test Automation Guru](http://www.testautomationguru.com/selenium/)
+ * [Selenium WebDriver – Scriptless Page Object Design Pattern](http://www.testautomationguru.com/selenium-webdriver-scriptless-page-object-design-pattern-part-1/)
 
 
 
