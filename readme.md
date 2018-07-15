@@ -115,6 +115,7 @@
 4. [Understand Stub, Mock and Fake in Unit Testing (C#)](https://www.c-sharpcorner.com/UploadFile/dacca2/understand-stub-mock-and-fake-in-unit-testing/)
 5. [Test Automation Guru](http://www.testautomationguru.com/selenium/)
  * [Selenium WebDriver – Scriptless Page Object Design Pattern](http://www.testautomationguru.com/selenium-webdriver-scriptless-page-object-design-pattern-part-1/)
+6. [ToolsQA](http://toolsqa.com/selenium-webdriver/page-object-model/)
 
 
 
