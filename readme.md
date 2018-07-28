@@ -54,7 +54,7 @@
 40. [Logs](https://12factor.net/logs)
 41. [Test Containers](http://www.java-allandsundry.com/2018/05/testcontainers-and-spring-boot.html)
 41. [WireMock](https://www.petrikainulainen.net/programming/testing/wiremock-tutorial-request-matching-part-one/?utm_source=twitter&utm_medium=social&utm_campaign=new-blog-post)
-42. []()
+42. [Lombok: Introduction to Project Lombok by baeldung ](http://www.baeldung.com/intro-to-project-lombok)
 
 
 
