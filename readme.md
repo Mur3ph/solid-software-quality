@@ -129,6 +129,7 @@
 7. [Test automation training is broken. Here's how to fix it](https://techbeacon.com/test-automation-training-broken-heres-how-fix-it?utm_source=newsletter&utm_medium=email&utm_campaign=tbnewsletter135)
 8. [Software testing as a career](https://www.guru99.com/software-testing-career-complete-guide.html)
 9. [Periodic Table of Testing](https://www.thebigtesttheory.com/?m=1)
+10. [Top 10 Websites Every Software Tester Should Follow in 2018](https://dzone.com/articles/top-10-websites-for-every-software-tester-should-f)
 
 
 
