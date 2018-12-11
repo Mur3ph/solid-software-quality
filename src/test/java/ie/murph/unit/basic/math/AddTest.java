@@ -1,4 +1,4 @@
-package test.java.ie.murph.basic.math;
+package test.java.ie.murph.unit.basic.math;
 
 import static org.junit.Assert.*;
 

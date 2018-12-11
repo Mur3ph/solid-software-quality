@@ -1,4 +1,4 @@
-package test.java.ie.murph.modulus;
+package test.java.ie.murph.unit.modulus;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
