@@ -1,0 +1,88 @@
+package main.java.ie.murph.selenium;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class RunSeleniumTest {
+
+	public static void main(String[] args) {
+
+		setGeckoDriver();
+		initializeMarionetteDriver();
+		WebDriver driver = launchFireFoxBrowserDriver();
+
+		String baseUrl = "http://demo.guru99.com/test/newtours/";
+		String expectedTitle = "Welcome: Mercury Tours";
+		String actualTitle = "";
+
+		first(driver,baseUrl, expectedTitle, actualTitle);
+		
+//		other();
+		
+//		other_one();
+	}
+
+	private static void setGeckoDriver() {
+		// if you didn't update the Path system variable to add the full directory path
+		// to the executable as above mentioned then doing this directly through code
+		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
+//		System.setProperty("webdriver.gecko.driver", "\"C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe\"");
+		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe");
+
+	}
+
+	private static void initializeMarionetteDriver() {
+		// Now you can Initialize marionette driver to launch firefox
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		capabilities.setCapability("marionette", true);
+	}
+
+	private static FirefoxDriver launchFireFoxBrowserDriver() {
+		return new FirefoxDriver();
+	}
+
+	public static void first(WebDriver driver, String baseUrl, String expectedTitle, String actualTitle) {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		// launch Fire fox and direct it to the Base URL
+		driver.get(baseUrl);
+
+		// get the actual value of the title
+		actualTitle = driver.getTitle();
+
+		/*
+		 * compare the actual title of the page with the expected one and print the
+		 * result as "Passed" or "Failed"
+		 */
+		if (actualTitle.contentEquals(expectedTitle)) {
+			System.out.println("Test Passed!");
+		} else {
+			System.out.println("Test Failed");
+		}
+
+		// close Fire fox
+		driver.close();
+	}
+
+	public static void other() {
+		System.setProperty("webdriver.firefox.profile", "default");
+		FirefoxDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("http://google.com/");
+	}
+	
+	public static void other_one()
+	{
+		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe");
+		
+		FirefoxOptions options = new FirefoxOptions();
+		options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //This is the location where you have installed Firefox on your machine
+ 
+		WebDriver driver = new FirefoxDriver(options);
+		driver.get("http://www.google.com");
+	}
+}
