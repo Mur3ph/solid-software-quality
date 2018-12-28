@@ -21,9 +21,6 @@ public class RunSeleniumTest {
 
 		first(driver,baseUrl, expectedTitle, actualTitle);
 		
-//		other();
-		
-//		other_one();
 	}
 
 	private static void setGeckoDriver() {
@@ -66,23 +63,5 @@ public class RunSeleniumTest {
 
 		// close Fire fox
 		driver.close();
-	}
-
-	public static void other() {
-		System.setProperty("webdriver.firefox.profile", "default");
-		FirefoxDriver driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("http://google.com/");
-	}
-	
-	public static void other_one()
-	{
-		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe");
-		
-		FirefoxOptions options = new FirefoxOptions();
-		options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //This is the location where you have installed Firefox on your machine
- 
-		WebDriver driver = new FirefoxDriver(options);
-		driver.get("http://www.google.com");
 	}
 }
