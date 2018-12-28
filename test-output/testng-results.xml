@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-28T22:18:52Z" name="Default suite" finished-at="2018-12-28T22:19:39Z" duration-ms="47163">
+  <suite started-at="2018-12-28T22:22:54Z" name="Default suite" finished-at="2018-12-28T22:23:41Z" duration-ms="46782">
     <groups>
     </groups>
-    <test started-at="2018-12-28T22:18:52Z" name="Default test" finished-at="2018-12-28T22:19:39Z" duration-ms="47163">
+    <test started-at="2018-12-28T22:22:54Z" name="Default test" finished-at="2018-12-28T22:23:41Z" duration-ms="46782">
       <class name="test.java.ie.murph.testng.InitialTestNg">
-        <test-method signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@6ab778a]" started-at="2018-12-28T22:18:52Z" name="verifyHomepageTitle" finished-at="2018-12-28T22:19:39Z" duration-ms="47086" status="FAIL">
+        <test-method signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@6ab778a]" started-at="2018-12-28T22:22:54Z" name="verifyHomepageTitle" finished-at="2018-12-28T22:23:41Z" duration-ms="46739" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Timed out waiting 45 seconds for Firefox to start.
@@ -54,7 +54,7 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:33825/hub/status] to be available after 45007 ms
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21624/hub/status] to be available after 45012 ms
 at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
 at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:245)
 ... 33 more

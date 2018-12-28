@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 public class InitialTestNg {
 
 	public String baseUrl = "http://demo.guru99.com/test/newtours/";
-    String driverPath = "C:\\geckodriver.exe";
+    String driverPath = "C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe";
     public WebDriver driver ; 
      
   @Test
