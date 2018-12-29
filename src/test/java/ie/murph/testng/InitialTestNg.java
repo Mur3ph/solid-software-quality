@@ -12,37 +12,64 @@ import test.java.ie.murph.selenium.WebDriver;
 
 public class InitialTestNg {
 
-	private static String baseUrl = "http://demo.guru99.com/test/newtours/";
-	private static String driverPath = "C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe";
-	private static WebDriver driver;
+	private String baseUrl = "http://demo.guru99.com/test/newtours/";
+	private String driverPath = "C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe";
+	private WebDriver driver;
+	private String expected = "";
+	private String actual = "";
 
-	@Test
-	public void verifyHomepageTitle() {
+	@BeforeTest
+	public void launchBrowser() {
 		System.out.println("launching firefox browser");
-		
-//		System.setProperty("webdriver.firefox.marionette", driverPath);
 		setGeckoDriver();
 		driver = launchFireFoxBrowserDriver();
 		getBrowserToWait();
-		
 		driver.get(baseUrl);
-		String expectedTitle = "Welcome: Mercury Tours";
-		String actualTitle = driver.getTitle();
-		Assert.assertEquals(actualTitle, expectedTitle);
-		driver.close();
 	}
-
-	private static void setGeckoDriver() {
+	
+	private void setGeckoDriver() {
 		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe");
 	}
 
-	private static FirefoxDriver launchFireFoxBrowserDriver() {
+	private FirefoxDriver launchFireFoxBrowserDriver() {
 		return new FirefoxDriver();
 	}
 
-	private static void getBrowserToWait()
-	{
+	private void getBrowserToWait(){
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+	@BeforeMethod
+	public void verifyHomepageTitle() {
+		String expectedTitle = "Welcome: Mercury Tours";
+		String actualTitle = driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle);
+	}
+
+	@Test(priority = 0)
+	public void register() {
+		driver.findElement(By.linkText("REGISTER")).click();
+		expected = "Register: Mercury Tours";
+		actual = driver.getTitle();
+		Assert.assertEquals(actual, expected);
+	}
+
+	@Test(priority = 1)
+	public void support() {
+		driver.findElement(By.linkText("SUPPORT")).click();
+		expected = "Under Construction: Mercury Tours";
+		actual = driver.getTitle();
+		Assert.assertEquals(actual, expected);
+	}
+
+	@AfterMethod
+	public void goBackToHomepage() {
+		driver.findElement(By.linkText("Home")).click();
+	}
+
+	@AfterTest
+	public void terminateBrowser() {
+		driver.close();
 	}
 
 }
