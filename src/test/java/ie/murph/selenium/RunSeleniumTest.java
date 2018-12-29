@@ -19,7 +19,7 @@ public class RunSeleniumTest {
 		String expectedTitle = "Welcome: Mercury Tours";
 		String actualTitle = "";
 
-		first(driver,baseUrl, expectedTitle, actualTitle);
+		runGetTitleTest(driver,baseUrl, expectedTitle, actualTitle);
 		
 	}
 
@@ -42,7 +42,7 @@ public class RunSeleniumTest {
 		return new FirefoxDriver();
 	}
 
-	public static void first(WebDriver driver, String baseUrl, String expectedTitle, String actualTitle) {
+	public static void runGetTitleTest(WebDriver driver, String baseUrl, String expectedTitle, String actualTitle) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// launch Fire fox and direct it to the Base URL
