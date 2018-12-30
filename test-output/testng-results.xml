@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-30T22:53:00Z" name="Default suite" finished-at="2018-12-30T22:53:12Z" duration-ms="11219">
+  <suite started-at="2018-12-30T22:53:50Z" name="Default suite" finished-at="2018-12-30T22:54:00Z" duration-ms="10575">
     <groups>
     </groups>
-    <test started-at="2018-12-30T22:53:00Z" name="Default test" finished-at="2018-12-30T22:53:12Z" duration-ms="11219">
+    <test started-at="2018-12-30T22:53:50Z" name="Default test" finished-at="2018-12-30T22:54:00Z" duration-ms="10575">
       <class name="test.java.ie.murph.testng.InitialTestNg">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:00Z" name="launchBrowser" finished-at="2018-12-30T22:53:07Z" duration-ms="6531" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:50Z" name="launchBrowser" finished-at="2018-12-30T22:53:55Z" duration-ms="5667" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:07Z" name="verifyHomepageTitle" finished-at="2018-12-30T22:53:07Z" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:55Z" name="verifyHomepageTitle" finished-at="2018-12-30T22:53:55Z" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepageTitle -->
-        <test-method signature="register()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:07Z" name="register" finished-at="2018-12-30T22:53:08Z" duration-ms="1018" status="PASS">
+        <test-method signature="register()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:55Z" name="register" finished-at="2018-12-30T22:53:56Z" duration-ms="1050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method is-config="true" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:08Z" name="goBackToHomepage" finished-at="2018-12-30T22:53:09Z" duration-ms="795" status="PASS">
+        <test-method is-config="true" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:56Z" name="goBackToHomepage" finished-at="2018-12-30T22:53:57Z" duration-ms="860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goBackToHomepage -->
-        <test-method is-config="true" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:09Z" name="verifyHomepageTitle" finished-at="2018-12-30T22:53:09Z" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:57Z" name="verifyHomepageTitle" finished-at="2018-12-30T22:53:57Z" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepageTitle -->
-        <test-method signature="support()[pri:1, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:09Z" name="support" finished-at="2018-12-30T22:53:10Z" duration-ms="971" status="PASS">
+        <test-method signature="support()[pri:1, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:57Z" name="support" finished-at="2018-12-30T22:53:58Z" duration-ms="1062" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- support -->
-        <test-method is-config="true" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:10Z" name="goBackToHomepage" finished-at="2018-12-30T22:53:11Z" duration-ms="841" status="PASS">
+        <test-method is-config="true" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:58Z" name="goBackToHomepage" finished-at="2018-12-30T22:53:59Z" duration-ms="957" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goBackToHomepage -->
-        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:11Z" name="terminateBrowser" finished-at="2018-12-30T22:53:12Z" duration-ms="979" status="PASS">
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@7748410a]" started-at="2018-12-30T22:53:59Z" name="terminateBrowser" finished-at="2018-12-30T22:54:00Z" duration-ms="891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
