@@ -4,17 +4,15 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import test.java.ie.murph.selenium.WebDriver;
-
 public class InitialTestNg {
 
-	private String baseUrl = "http://demo.guru99.com/test/newtours/";
-	private String driverPath = "C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe";
-	private WebDriver driver;
+	private String BASE_URL_OF_SITE_TO_TEST = "http://demo.guru99.com/test/newtours/";
+	private String PATH_TO_GECKO_DRIVER = "C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe";
+	private String GECKO_DRIVER_NAME = "webdriver.gecko.driver";
+	private WebDriver WEB_DRIVER;
 	private String expected = "";
 	private String actual = "";
 
@@ -22,13 +20,13 @@ public class InitialTestNg {
 	public void launchBrowser() {
 		System.out.println("launching firefox browser");
 		setGeckoDriver();
-		driver = launchFireFoxBrowserDriver();
+		WEB_DRIVER = launchFireFoxBrowserDriver();
 		getBrowserToWait();
-		driver.get(baseUrl);
+		WEB_DRIVER.get(BASE_URL_OF_SITE_TO_TEST);
 	}
 	
 	private void setGeckoDriver() {
-		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe");
+		System.setProperty(GECKO_DRIVER_NAME, PATH_TO_GECKO_DRIVER);
 	}
 
 	private FirefoxDriver launchFireFoxBrowserDriver() {
@@ -36,40 +34,40 @@ public class InitialTestNg {
 	}
 
 	private void getBrowserToWait(){
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WEB_DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	@BeforeMethod
 	public void verifyHomepageTitle() {
 		String expectedTitle = "Welcome: Mercury Tours";
-		String actualTitle = driver.getTitle();
+		String actualTitle = WEB_DRIVER.getTitle();
 		Assert.assertEquals(actualTitle, expectedTitle);
 	}
 
 	@Test(priority = 0)
 	public void register() {
-		driver.findElement(By.linkText("REGISTER")).click();
+		WEB_DRIVER.findElement(By.linkText("REGISTER")).click();
 		expected = "Register: Mercury Tours";
-		actual = driver.getTitle();
+		actual = WEB_DRIVER.getTitle();
 		Assert.assertEquals(actual, expected);
 	}
 
 	@Test(priority = 1)
 	public void support() {
-		driver.findElement(By.linkText("SUPPORT")).click();
+		WEB_DRIVER.findElement(By.linkText("SUPPORT")).click();
 		expected = "Under Construction: Mercury Tours";
-		actual = driver.getTitle();
+		actual = WEB_DRIVER.getTitle();
 		Assert.assertEquals(actual, expected);
 	}
 
 	@AfterMethod
 	public void goBackToHomepage() {
-		driver.findElement(By.linkText("Home")).click();
+		WEB_DRIVER.findElement(By.linkText("Home")).click();
 	}
 
 	@AfterTest
 	public void terminateBrowser() {
-		driver.close();
+		WEB_DRIVER.close();
 	}
 
 }

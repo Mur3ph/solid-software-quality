@@ -5,7 +5,11 @@
     <classes>
       <class name="test.java.ie.murph.testng.InitialTestNg">
         <methods>
+          <include name="support"/>
           <include name="verifyHomepageTitle"/>
+          <include name="goBackToHomepage"/>
+          <include name="launchBrowser"/>
+          <include name="terminateBrowser"/>
         </methods>
       </class> <!-- test.java.ie.murph.testng.InitialTestNg -->
     </classes>
