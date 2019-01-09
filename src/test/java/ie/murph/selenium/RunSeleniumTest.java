@@ -2,12 +2,16 @@ package test.java.ie.murph.selenium;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+
 public class RunSeleniumTest {
+	private static final Logger LOGGER = LogManager.getLogger(RunSeleniumTest.class.getName());
 
 	public static void main(String[] args) {
 
@@ -28,8 +32,9 @@ public class RunSeleniumTest {
 		// to the executable as above mentioned then doing this directly through code
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
 //		System.setProperty("webdriver.gecko.driver", "\"C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe\"");
-		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe");
-
+		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe"); // look into setting up via .properties or .xml file
+		LOGGER.info(System.getProperty("webdriver.gecko.driver"));
+		LOGGER.info(System.getProperties());
 	}
 
 	private static void initializeMarionetteDriver() {
