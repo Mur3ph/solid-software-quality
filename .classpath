@@ -14,7 +14,6 @@
 	<classpathentry kind="lib" path="lib/client-combined-3.141.59.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.10.jar"/>
-	<classpathentry kind="lib" path="lib/log4j-core-2.11.0.jar"/>
 	<classpathentry kind="lib" path="lib/byte-buddy-1.8.15.jar"/>
 	<classpathentry kind="lib" path="lib/client-combined-3.141.59-sources.jar"/>
 	<classpathentry kind="lib" path="lib/commons-exec-1.3.jar"/>
@@ -24,5 +23,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="C:/dev/test/junit-4.10.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

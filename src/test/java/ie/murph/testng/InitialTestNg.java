@@ -7,8 +7,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class InitialTestNg {
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
+public class InitialTestNg {
+	private static final Logger LOGGER = LogManager.getLogger(InitialTestNg.class.getName());
 	private String BASE_URL_OF_SITE_TO_TEST = "http://demo.guru99.com/test/newtours/";
 	private String PATH_TO_GECKO_DRIVER = "C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe";
 	private String GECKO_DRIVER_NAME = "webdriver.gecko.driver";
@@ -18,13 +21,13 @@ public class InitialTestNg {
 
 	@BeforeTest
 	public void launchBrowser() {
-		System.out.println("launching firefox browser");
+		LOGGER.info("launching firefox browser");
 		setGeckoDriver();
 		WEB_DRIVER = launchFireFoxBrowserDriver();
 		getBrowserToWait();
 		WEB_DRIVER.get(BASE_URL_OF_SITE_TO_TEST);
 	}
-	
+
 	private void setGeckoDriver() {
 		System.setProperty(GECKO_DRIVER_NAME, PATH_TO_GECKO_DRIVER);
 	}
@@ -33,7 +36,7 @@ public class InitialTestNg {
 		return new FirefoxDriver();
 	}
 
-	private void getBrowserToWait(){
+	private void getBrowserToWait() {
 		WEB_DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
