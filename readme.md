@@ -130,6 +130,7 @@
 8. [Software testing as a career](https://www.guru99.com/software-testing-career-complete-guide.html)
 9. [Periodic Table of Testing](https://www.thebigtesttheory.com/?m=1)
 10. [Top 10 Websites Every Software Tester Should Follow in 2018](https://dzone.com/articles/top-10-websites-for-every-software-tester-should-f)
+11. [Top 5 Java Test Frameworks For Automation In 2019](https://www.lambdatest.com/blog/top-5-java-test-frameworks-for-automation-in-2019/)
 
 
 
