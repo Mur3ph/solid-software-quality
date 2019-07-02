@@ -1,41 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results skipped="2" failed="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-01-09T22:05:49Z" name="Default suite" finished-at="2019-01-09T22:05:59Z" duration-ms="10304">
+  <suite name="Default suite" duration-ms="607" started-at="2019-07-02T20:34:17Z" finished-at="2019-07-02T20:34:18Z">
     <groups>
     </groups>
-    <test started-at="2019-01-09T22:05:49Z" name="Default test" finished-at="2019-01-09T22:05:59Z" duration-ms="10304">
+    <test name="Default test" duration-ms="607" started-at="2019-07-02T20:34:17Z" finished-at="2019-07-02T20:34:18Z">
       <class name="test.java.ie.murph.testng.InitialTestNg">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:49Z" name="launchBrowser" finished-at="2019-01-09T22:05:55Z" duration-ms="6019" status="PASS">
+        <test-method status="FAIL" signature="launchBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2019-07-02T21:34:17Z" finished-at="2019-07-02T21:34:17Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\dev\test\gecko-driver\geckodriver.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\dev\test\gecko-driver\geckodriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+	at test.java.ie.murph.testng.InitialTestNg.launchFireFoxBrowserDriver(InitialTestNg.java:36)
+	at test.java.ie.murph.testng.InitialTestNg.launchBrowser(InitialTestNg.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:55Z" name="verifyHomepageTitle" finished-at="2019-01-09T22:05:55Z" duration-ms="5" status="PASS">
+        <test-method status="SKIP" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="verifyHomepageTitle" is-config="true" duration-ms="0" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepageTitle -->
-        <test-method signature="register()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:55Z" name="register" finished-at="2019-01-09T22:05:56Z" duration-ms="1040" status="PASS">
+        <test-method status="SKIP" signature="register()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="register" duration-ms="0" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method is-config="true" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:56Z" name="goBackToHomepage" finished-at="2019-01-09T22:05:57Z" duration-ms="883" status="PASS">
+        <test-method status="SKIP" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="goBackToHomepage" is-config="true" duration-ms="0" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goBackToHomepage -->
-        <test-method is-config="true" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:57Z" name="verifyHomepageTitle" finished-at="2019-01-09T22:05:57Z" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomepageTitle -->
-        <test-method signature="support()[pri:1, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:57Z" name="support" finished-at="2019-01-09T22:05:58Z" duration-ms="778" status="PASS">
+        <test-method status="SKIP" signature="support()[pri:1, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="support" duration-ms="1" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- support -->
-        <test-method is-config="true" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:58Z" name="goBackToHomepage" finished-at="2019-01-09T22:05:59Z" duration-ms="680" status="PASS">
+        <test-method status="SKIP" signature="verifyHomepageTitle()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="verifyHomepageTitle" is-config="true" duration-ms="0" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepageTitle -->
+        <test-method status="SKIP" signature="goBackToHomepage()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="goBackToHomepage" is-config="true" duration-ms="0" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goBackToHomepage -->
-        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@1151e434]" started-at="2019-01-09T22:05:59Z" name="terminateBrowser" finished-at="2019-01-09T22:05:59Z" duration-ms="850" status="PASS">
+        <test-method status="SKIP" signature="terminateBrowser()[pri:0, instance:test.java.ie.murph.testng.InitialTestNg@3a03464]" name="terminateBrowser" is-config="true" duration-ms="0" started-at="2019-07-02T21:34:18Z" finished-at="2019-07-02T21:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
