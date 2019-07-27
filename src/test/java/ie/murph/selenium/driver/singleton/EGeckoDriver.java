@@ -1,4 +1,4 @@
-package test.java.ie.murph.selenium.driver;
+package test.java.ie.murph.selenium.driver.singleton;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
