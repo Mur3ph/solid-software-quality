@@ -1,6 +1,6 @@
 package test.java.ie.murph.selenium.domain;
 
-public enum EWebURLLink
+public enum EURLPathConstants
 {
 	GECKO_WEB_DRIVER_PROPERTY("webdriver.gecko.driver"),
 	GECKO_WEB_DRIVER_EXE_JAR_PATH("C:\\dev\\jars\\geckodriver.exe"),
@@ -9,7 +9,7 @@ public enum EWebURLLink
 	
 	private final String text;
 
-    private EWebURLLink(final String text) 
+    private EURLPathConstants(final String text) 
     {
         this.text = text;
     }

@@ -8,8 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import test.java.ie.murph.selenium.domain.EWebURLLink;
-import test.java.ie.murph.selenium.domain.IText;
+import test.java.ie.murph.selenium.domain.EURLPathConstants;
+import test.java.ie.murph.selenium.domain.ITextConstants;
 
 
 public class RunSeleniumTest {
@@ -23,7 +23,7 @@ public class RunSeleniumTest {
 
 		String actualTitle = "";
 
-		runGetTitleTest(driver, EWebURLLink.GURU99_TOURS_BASE_URL.toString(), IText.GURU99_TOURS_EXPECTED_TITLE, actualTitle);
+		runGetTitleTest(driver, EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE, actualTitle);
 		
 	}
 
@@ -33,8 +33,8 @@ public class RunSeleniumTest {
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
 //		System.setProperty("webdriver.gecko.driver", "\"C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe\"");
 //		C:\dev\jars
-		System.setProperty(EWebURLLink.GECKO_WEB_DRIVER_PROPERTY.toString(), EWebURLLink.GECKO_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
-		LOGGER.info(System.getProperty(EWebURLLink.GECKO_WEB_DRIVER_PROPERTY.toString()));
+		System.setProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(), EURLPathConstants.GECKO_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
+		LOGGER.info(System.getProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
 		LOGGER.info(System.getProperties());
 	}
 
@@ -62,9 +62,9 @@ public class RunSeleniumTest {
 		 * result as "Passed" or "Failed"
 		 */
 		if (actualTitle.contentEquals(expectedTitle)) {
-			System.out.println(IText.GURU99_TOURS_TEST_PASSED);
+			System.out.println(ITextConstants.GURU99_TOURS_TEST_PASSED);
 		} else {
-			System.out.println(IText.GURU99_TOURS_TEST_FAILED);
+			System.out.println(ITextConstants.GURU99_TOURS_TEST_FAILED);
 		}
 
 		// close Fire fox
