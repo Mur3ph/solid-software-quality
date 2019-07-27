@@ -32,7 +32,8 @@ public class RunSeleniumTest {
 		// to the executable as above mentioned then doing this directly through code
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
 //		System.setProperty("webdriver.gecko.driver", "\"C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe\"");
-		System.setProperty("webdriver.gecko.driver", "C:\\dev\\test\\gecko-driver\\geckodriver.exe"); // look into setting up via .properties or .xml file
+//		C:\dev\jars
+		System.setProperty("webdriver.gecko.driver", "C:\\dev\\jars\\geckodriver.exe"); // look into setting up via .properties or .xml file
 		LOGGER.info(System.getProperty("webdriver.gecko.driver"));
 		LOGGER.info(System.getProperties());
 	}
