@@ -12,14 +12,28 @@ public class TourPage {
 	private static final Logger LOGGER = LogManager.getLogger(TourPage.class.getName());
 
 	public void runGetTitleTest(WebDriver driver, String baseUrl, String expectedTitle, String actualTitle) {
+		keepBrowserOpenForNumberOfSeconds(driver);
+
+		directToBaseURLOfToursPage(driver, baseUrl);
+		actualTitle = getTitleValueOfTourPage(driver);
+		assertTitleName(actualTitle, actualTitle);
+		closeFirefoxBrowser(driver);
+	}
+	
+	private void keepBrowserOpenForNumberOfSeconds(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
 
-		// launch Fire fox and direct it to the Base URL
+	private void directToBaseURLOfToursPage(WebDriver driver, String baseUrl) {
+//		launch Firefox
 		driver.get(baseUrl);
+	}
 
-		// get the actual value of the title
-		actualTitle = driver.getTitle();
+	private String getTitleValueOfTourPage(WebDriver driver) {
+		return driver.getTitle();
+	}
 
+	private void assertTitleName(String actualTitle, String expectedTitle) {
 		/*
 		 * compare the actual title of the page with the expected one and print the
 		 * result as "Passed" or "Failed"
@@ -31,8 +45,9 @@ public class TourPage {
 			LOGGER.info(ITextConstants.GURU99_TOURS_TEST_FAILED);
 			System.out.println(ITextConstants.GURU99_TOURS_TEST_FAILED);
 		}
-
-		// close Fire fox
+	}
+	
+	private void closeFirefoxBrowser(WebDriver driver) {
 		driver.close();
 	}
 	
