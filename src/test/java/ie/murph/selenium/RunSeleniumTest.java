@@ -1,7 +1,5 @@
 package test.java.ie.murph.selenium;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -10,11 +8,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import test.java.ie.murph.selenium.domain.EURLPathConstants;
 import test.java.ie.murph.selenium.domain.ITextConstants;
+import test.java.ie.murph.selenium.guru.TourPage;
 
 
 public class RunSeleniumTest {
 	private static final Logger LOGGER = LogManager.getLogger(RunSeleniumTest.class.getName());
-
+	
+	public RunSeleniumTest() {}
+	
 	public static void main(String[] args) {
 
 		setGeckoDriver();
@@ -22,8 +23,9 @@ public class RunSeleniumTest {
 		WebDriver driver = launchFireFoxBrowserDriver();
 
 		String actualTitle = "";
-
-		runGetTitleTest(driver, EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE, actualTitle);
+		
+		TourPage tourPage = new TourPage();
+		tourPage.runGetTitleTest(driver, EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE, actualTitle);
 		
 	}
 
@@ -48,26 +50,4 @@ public class RunSeleniumTest {
 		return new FirefoxDriver();
 	}
 
-	public static void runGetTitleTest(WebDriver driver, String baseUrl, String expectedTitle, String actualTitle) {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		// launch Fire fox and direct it to the Base URL
-		driver.get(baseUrl);
-
-		// get the actual value of the title
-		actualTitle = driver.getTitle();
-
-		/*
-		 * compare the actual title of the page with the expected one and print the
-		 * result as "Passed" or "Failed"
-		 */
-		if (actualTitle.contentEquals(expectedTitle)) {
-			System.out.println(ITextConstants.GURU99_TOURS_TEST_PASSED);
-		} else {
-			System.out.println(ITextConstants.GURU99_TOURS_TEST_FAILED);
-		}
-
-		// close Fire fox
-		driver.close();
-	}
 }
