@@ -6,8 +6,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import test.java.ie.murph.selenium.domain.EWebURLLink;
+import test.java.ie.murph.selenium.domain.IText;
 
 
 public class RunSeleniumTest {
@@ -19,11 +21,9 @@ public class RunSeleniumTest {
 		initializeMarionetteDriver();
 		WebDriver driver = launchFireFoxBrowserDriver();
 
-		String baseUrl = "http://demo.guru99.com/test/newtours/";
-		String expectedTitle = "Welcome: Mercury Tours";
 		String actualTitle = "";
 
-		runGetTitleTest(driver,baseUrl, expectedTitle, actualTitle);
+		runGetTitleTest(driver, EWebURLLink.GURU99_TOURS_BASE_URL.toString(), IText.GURU99_TOURS_EXPECTED_TITLE, actualTitle);
 		
 	}
 
@@ -33,8 +33,8 @@ public class RunSeleniumTest {
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
 //		System.setProperty("webdriver.gecko.driver", "\"C:\\\\dev\\\\test\\\\gecko-driver\\\\geckodriver.exe\"");
 //		C:\dev\jars
-		System.setProperty("webdriver.gecko.driver", "C:\\dev\\jars\\geckodriver.exe"); // look into setting up via .properties or .xml file
-		LOGGER.info(System.getProperty("webdriver.gecko.driver"));
+		System.setProperty(EWebURLLink.GECKO_WEB_DRIVER_PROPERTY.toString(), EWebURLLink.GECKO_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
+		LOGGER.info(System.getProperty(EWebURLLink.GECKO_WEB_DRIVER_PROPERTY.toString()));
 		LOGGER.info(System.getProperties());
 	}
 
@@ -62,9 +62,9 @@ public class RunSeleniumTest {
 		 * result as "Passed" or "Failed"
 		 */
 		if (actualTitle.contentEquals(expectedTitle)) {
-			System.out.println("Test Passed!");
+			System.out.println(IText.GURU99_TOURS_TEST_PASSED);
 		} else {
-			System.out.println("Test Failed");
+			System.out.println(IText.GURU99_TOURS_TEST_FAILED);
 		}
 
 		// close Fire fox
