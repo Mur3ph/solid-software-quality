@@ -4,12 +4,12 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import test.java.ie.murph.selenium.domain.EURLPathConstants;
-import test.java.ie.murph.selenium.domain.ITextConstants;
 import test.java.ie.murph.selenium.driver.singleton.EFirefoxDriver;
 import test.java.ie.murph.selenium.driver.singleton.EGeckoDriver;
 import test.java.ie.murph.selenium.driver.singleton.EMarionetteDriver;
 import test.java.ie.murph.selenium.guru.TourPage;
+import test.java.ie.murph.selenium.util.EURLPathConstants;
+import test.java.ie.murph.selenium.util.ITextConstants;
 
 
 public class RunSeleniumTest {

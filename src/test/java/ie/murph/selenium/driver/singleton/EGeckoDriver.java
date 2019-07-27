@@ -3,7 +3,7 @@ package test.java.ie.murph.selenium.driver.singleton;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import test.java.ie.murph.selenium.domain.EURLPathConstants;
+import test.java.ie.murph.selenium.util.EURLPathConstants;
 
 public enum EGeckoDriver {
 	INSTANCE;

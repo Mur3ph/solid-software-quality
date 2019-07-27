@@ -6,7 +6,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import test.java.ie.murph.selenium.domain.ITextConstants;
+import test.java.ie.murph.selenium.util.ITextConstants;
 
 public class TourPage {
 	private static final Logger LOGGER = LogManager.getLogger(TourPage.class.getName());

@@ -1,4 +1,4 @@
-package test.java.ie.murph.selenium.domain;
+package test.java.ie.murph.selenium.util;
 
 public interface ITodo
 {
