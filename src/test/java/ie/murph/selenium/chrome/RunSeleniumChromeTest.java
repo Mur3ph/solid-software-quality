@@ -15,7 +15,7 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 	
 	public RunSeleniumChromeTest() {}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		LOGGER.info("++main() thread"); 
 		EChromeDriver.setChromeDriver();
 		WebDriver driver = EChromeDriver.launchChromeBrowserDriver();
@@ -25,11 +25,23 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
+//		findById(driver);
+		findByName(driver);
+		
+		driver.close();
+	}
+
+	private static void findById(WebDriver driver) {
 		driver.get("https://www.ebay.ie/");
 		driver.findElement(By.id("gh-ac")).sendKeys("Mobiles");
 		driver.findElement(By.id("gh-btn")).click();
-		
-		driver.close();
+	}
+
+	private static void findByName(WebDriver driver) throws InterruptedException {
+		driver.get("https://www.myntra.com/");
+		driver.findElement(By.name("email")).sendKeys("edureka@gmail.com");
+		Thread.sleep(3000);
+		driver.findElement(By.name("password")).sendKeys("qwerty");
 	}
 	
 }
