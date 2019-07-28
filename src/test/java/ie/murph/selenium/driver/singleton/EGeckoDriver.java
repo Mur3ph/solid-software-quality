@@ -14,7 +14,7 @@ public enum EGeckoDriver {
 		// if you didn't update the Path system variable to add the full directory path
 		// to the executable as above mentioned then doing this directly through code
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
-		System.setProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(), EURLPathConstants.GECKO_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
+		System.setProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(), EURLPathConstants.GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
 		LOGGER.info(System.getProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
 		LOGGER.info(System.getProperties());
 	}

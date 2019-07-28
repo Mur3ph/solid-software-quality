@@ -8,7 +8,8 @@ import test.java.ie.murph.selenium.driver.singleton.EGeckoDriver;
 public enum EURLPathConstants
 {
 	GECKO_WEB_DRIVER_PROPERTY("webdriver.gecko.driver"),
-	GECKO_WEB_DRIVER_EXE_JAR_PATH("C:\\dev\\jars\\geckodriver.exe"),
+	GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH("C:\\dev\\jars\\web-drivers\\firefox\\geckodriver.exe"),
+	CHROME_WEB_DRIVER_EXE_JAR_PATH("C:\\dev\\jars\\web-drivers\\chrome\\chromedriver.exe"),
 	GURU99_TOURS_BASE_URL("http://demo.guru99.com/test/newtours/"),
 	STACK_TRACE("Stack Trace Error: ");
 	
