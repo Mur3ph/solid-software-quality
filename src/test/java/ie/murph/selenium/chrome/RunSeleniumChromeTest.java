@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import test.java.ie.murph.selenium.chrome.page.domain.EBay;
 import test.java.ie.murph.selenium.driver.singleton.EChromeDriver;
 
 public class RunSeleniumChromeTest {
@@ -25,18 +26,13 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		findById(driver);
+		EBay ebay = new EBay();
+		ebay.findById(driver);
 		findByName(driver);
-		findByCSSSelector(driver);
+		ebay.findByCSSSelector(driver);
 		findByXPath(driver);
 		
 //		driver.close();
-	}
-
-	private static void findById(WebDriver driver) {
-		driver.get("https://www.ebay.ie/"); // https://www.myntra.com/login?referer=https://www.myntra.com/
-		driver.findElement(By.id("gh-ac")).sendKeys("Mobiles");
-		driver.findElement(By.id("gh-btn")).click();
 	}
 
 	private static void findByName(WebDriver driver) throws InterruptedException {
@@ -46,12 +42,6 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		driver.findElement(By.name("password")).sendKeys("qwerty");
 	}
 	
-	private static void findByCSSSelector(WebDriver driver) {
-		driver.get("https://www.ebay.ie/");
-		driver.findElement(By.cssSelector("#gh-ac")).sendKeys("Metal Detector Headphones");
-		driver.findElement(By.cssSelector("#gh-btn")).click();
-	}
-
 	private static void findByXPath(WebDriver driver) {
 		driver.get("https://www.myntra.com/login?referer=https://www.myntra.com/");
 		driver.findElement(By.xpath("//input[@placeholder='Your Email Address']")).sendKeys("edureka@yahoo.com");
