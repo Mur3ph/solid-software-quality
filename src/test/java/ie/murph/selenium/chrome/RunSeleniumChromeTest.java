@@ -25,14 +25,16 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-//		findById(driver);
+		findById(driver);
 		findByName(driver);
+		findByCSSSelector(driver);
+		findByXPath(driver);
 		
-		driver.close();
+//		driver.close();
 	}
 
 	private static void findById(WebDriver driver) {
-		driver.get("https://www.ebay.ie/");
+		driver.get("https://www.ebay.ie/"); // https://www.myntra.com/login?referer=https://www.myntra.com/
 		driver.findElement(By.id("gh-ac")).sendKeys("Mobiles");
 		driver.findElement(By.id("gh-btn")).click();
 	}
@@ -42,6 +44,17 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		driver.findElement(By.name("email")).sendKeys("edureka@gmail.com");
 		Thread.sleep(3000);
 		driver.findElement(By.name("password")).sendKeys("qwerty");
+	}
+	
+	private static void findByCSSSelector(WebDriver driver) {
+		driver.get("https://www.ebay.ie/");
+		driver.findElement(By.cssSelector("#gh-ac")).sendKeys("Metal Detector Headphones");
+		driver.findElement(By.cssSelector("#gh-btn")).click();
+	}
+
+	private static void findByXPath(WebDriver driver) {
+		driver.get("https://www.myntra.com/login?referer=https://www.myntra.com/");
+		driver.findElement(By.xpath("//input[@placeholder='Your Email Address']")).sendKeys("edureka@yahoo.com");
 	}
 	
 }
