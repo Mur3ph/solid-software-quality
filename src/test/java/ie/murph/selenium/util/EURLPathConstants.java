@@ -1,5 +1,10 @@
 package test.java.ie.murph.selenium.util;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import test.java.ie.murph.selenium.driver.singleton.EGeckoDriver;
+
 public enum EURLPathConstants
 {
 	GECKO_WEB_DRIVER_PROPERTY("webdriver.gecko.driver"),
@@ -7,6 +12,7 @@ public enum EURLPathConstants
 	GURU99_TOURS_BASE_URL("http://demo.guru99.com/test/newtours/"),
 	STACK_TRACE("Stack Trace Error: ");
 	
+	private static final Logger LOGGER = LogManager.getLogger(EGeckoDriver.class.getName());
 	private final String text;
 
     private EURLPathConstants(final String text) 
@@ -17,6 +23,7 @@ public enum EURLPathConstants
     @Override
     public String toString() 
     {
+    	LOGGER.info("++toString()");
         return this.text;
-}
+    }
 }

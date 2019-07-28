@@ -10,6 +10,7 @@ public enum EGeckoDriver {
     private static final Logger LOGGER = LogManager.getLogger(EGeckoDriver.class.getName());
     
     public static void setGeckoDriver() {
+    	LOGGER.info("++setGeckoDriver()");
 		// if you didn't update the Path system variable to add the full directory path
 		// to the executable as above mentioned then doing this directly through code
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
