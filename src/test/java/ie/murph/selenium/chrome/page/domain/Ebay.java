@@ -3,7 +3,7 @@ package test.java.ie.murph.selenium.chrome.page.domain;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class EBay {
+public class Ebay {
 
 	public void findById(WebDriver driver) {
 		driver.get("https://www.ebay.ie/"); // https://www.myntra.com/login?referer=https://www.myntra.com/
