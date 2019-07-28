@@ -1,4 +1,4 @@
-package test.java.ie.murph.selenium.guru;
+package test.java.ie.murph.selenium.firefox.guru;
 
 import java.util.concurrent.TimeUnit;
 
