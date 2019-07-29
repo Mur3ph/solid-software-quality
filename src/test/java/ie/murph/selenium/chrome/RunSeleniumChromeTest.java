@@ -21,10 +21,7 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		EChromeDriver.setChromeDriver();
 		WebDriver driver = EChromeDriver.launchChromeBrowserDriver();
 		
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		setupBrowser(driver);
 		
 		Ebay ebay = new Ebay();
 		Myntra myntra = new Myntra();
@@ -34,6 +31,13 @@ private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.
 		myntra.findByXPath(driver);
 		
 //		driver.close();
+	}
+
+	private static void setupBrowser(WebDriver driver) {
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 }
