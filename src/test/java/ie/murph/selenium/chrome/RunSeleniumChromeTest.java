@@ -33,7 +33,8 @@ public class RunSeleniumChromeTest {
 		ebay.findByCSSSelector(driver);
 		myntra.findByXPath(driver);
 
-		// driver.close();
+		askToContinue();
+		closeChromeBrowser(driver);
 	}
 
 	private static void setupBrowser(WebDriver driver) {
@@ -56,6 +57,11 @@ public class RunSeleniumChromeTest {
 			System.exit(0);
 		} else
 			askToContinue();
+	}
+	
+	private static void closeChromeBrowser(WebDriver driver) {
+		LOGGER.info("++closeFirefoxBrowser()");
+		driver.close();
 	}
 
 }
