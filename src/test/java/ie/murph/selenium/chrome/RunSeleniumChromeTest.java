@@ -7,9 +7,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import test.java.ie.murph.selenium.chrome.page.domain.Ebay;
-import test.java.ie.murph.selenium.chrome.page.domain.Myntra;
 import test.java.ie.murph.selenium.driver.singleton.EChromeDriver;
+import test.java.ie.murph.selenium.page.domain.Ebay;
+import test.java.ie.murph.selenium.page.domain.Myntra;
 
 public class RunSeleniumChromeTest {
 

@@ -1,4 +1,4 @@
-package test.java.ie.murph.selenium.chrome.page.domain;
+package test.java.ie.murph.selenium.page.domain;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

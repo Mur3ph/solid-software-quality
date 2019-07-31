@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import test.java.ie.murph.selenium.driver.singleton.EFirefoxDriver;
 import test.java.ie.murph.selenium.driver.singleton.EGeckoDriver;
 import test.java.ie.murph.selenium.driver.singleton.EMarionetteDriver;
-import test.java.ie.murph.selenium.firefox.guru.TourPage;
+import test.java.ie.murph.selenium.page.domain.TourPage;
 import test.java.ie.murph.selenium.util.EURLPathConstants;
 import test.java.ie.murph.selenium.util.ITextConstants;
 

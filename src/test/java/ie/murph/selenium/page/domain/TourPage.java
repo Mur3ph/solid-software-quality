@@ -1,4 +1,4 @@
-package test.java.ie.murph.selenium.firefox.guru;
+package test.java.ie.murph.selenium.page.domain;
 
 import java.util.concurrent.TimeUnit;
 
