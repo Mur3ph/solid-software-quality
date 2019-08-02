@@ -16,18 +16,20 @@ public class BrowserDriver {
 	WebDriver driver;
 
 	public BrowserDriver() {}
+	
+	public BrowserDriver(WebDriver driver) {}
 
-    public static ChromeDriver instantiateChromeBrowserDriver() {
+    public ChromeDriver instantiateChromeBrowserDriver() {
     	LOGGER.info("++instantiateChromeBrowserDriver()");
 		return new ChromeDriver();
 	}
 	
-    public static FirefoxDriver instantiateFireFoxBrowserDriver() {
+    public FirefoxDriver instantiateFireFoxBrowserDriver() {
     	LOGGER.info("++instantiateFireFoxBrowserDriver()");
 		return new FirefoxDriver();
 	}
 	
-	 public static void setChromeDriverSystemVariableProperty() {
+	 public void setChromeDriverSystemVariableProperty() {
 	    	LOGGER.info("++setChromeDriverSystemVariableProperty()");
 			// if you didn't update the Path system variable to add the full directory path
 			// to the executable as above mentioned then doing this directly through code
@@ -37,7 +39,7 @@ public class BrowserDriver {
 			LOGGER.info(System.getProperties());
 		}
 	 
-	 public static void setFirefoxGeckoDriverSystemVariableProperty() {
+	 public  void setFirefoxGeckoDriverSystemVariableProperty() {
 	    	LOGGER.info("++setFirefoxGeckoDriverSystemVariableProperty()");
 			// if you didn't update the Path system variable to add the full directory path
 			// to the executable as above mentioned then doing this directly through code
