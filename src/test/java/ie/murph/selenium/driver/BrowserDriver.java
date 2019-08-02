@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import test.java.ie.murph.selenium.util.Browser;
 import test.java.ie.murph.selenium.util.EURLPathConstants;
 
 public class BrowserDriver {
@@ -17,16 +18,28 @@ public class BrowserDriver {
 
 	public BrowserDriver() {}
 	
-	public BrowserDriver(WebDriver driver) {}
+	public BrowserDriver(WebDriver driver, Browser browser) {
+	    switch (browser) {
+	        case GOOGLE_CHROME:
+	        	instantiateChromeBrowserDriver(); 
+	            break;
+	        case MOZILLA_FIREFOX:
+	        	instantiateFireFoxBrowserDriver();
+	            break;
+	        default:
+	        	LOGGER.info("BROWSER NOT SUPPORTED");;
+	            break;
+	    }
+	}
 
-    public ChromeDriver instantiateChromeBrowserDriver() {
+    public void instantiateChromeBrowserDriver() {
     	LOGGER.info("++instantiateChromeBrowserDriver()");
-		return new ChromeDriver();
+    	driver = new ChromeDriver();
 	}
 	
-    public FirefoxDriver instantiateFireFoxBrowserDriver() {
+    public void instantiateFireFoxBrowserDriver() {
     	LOGGER.info("++instantiateFireFoxBrowserDriver()");
-		return new FirefoxDriver();
+    	driver = new FirefoxDriver();
 	}
 	
 	 public void setChromeDriverSystemVariableProperty() {
@@ -49,27 +62,27 @@ public class BrowserDriver {
 			LOGGER.info(System.getProperties());
 		}
 	
-	public void setBrowserToMaxSize(WebDriver driver) {
+	public void setBrowserToMaxSize() {
 		LOGGER.info("++setBrowserToMaxSize()");
 		driver.manage().window().maximize();
 	}
 
-	public void clearBrowserCookies(WebDriver driver) {
+	public void clearBrowserCookies() {
 		LOGGER.info("++clearBrowserCookies()");
 		driver.manage().deleteAllCookies();
 	}
 
-	public void setBrowserToTimeoutInSeconds(WebDriver driver, int seconds) {
+	public void setBrowserToTimeoutInSeconds(int seconds) {
 		LOGGER.info("++setBrowserToTimeoutInSeconds()");
 		driver.manage().timeouts().pageLoadTimeout(seconds, TimeUnit.SECONDS);
 	}
 
-	public void setBrowserImpliciteWaitInSeconds(WebDriver driver) {
+	public void setBrowserImpliciteWaitInSeconds() {
 		LOGGER.info("++setBrowserImpliciteWaitInSeconds()");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	public void closeBrowser(WebDriver driver) {
+	public void closeBrowser() {
 		LOGGER.info("++closeBrowser()");
 		driver.close();
 	}
