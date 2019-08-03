@@ -7,7 +7,7 @@ import test.java.ie.murph.selenium.driver.singleton.EGeckoDriver;
 
 public enum EXPath
 {
-	INPUT_PLACEHOLDER_EMAIL_ADDRESS_MESSAGE("\"//input[@placeholder='Your Email Address']\""),
+	INPUT_PLACEHOLDER_EMAIL_ADDRESS_MESSAGE("//input[@placeholder='Your Email Address']"),
 	STACK_TRACE("");
 	
 	private static final Logger LOGGER = LogManager.getLogger(EGeckoDriver.class.getName());

@@ -23,7 +23,7 @@ public class Myntra {
 	public void findByXPath(WebDriver driver) {
 		LOGGER.info("++findByXPath()");
 		driver.get(EURLPathConstants.MYNTRA_LOGIN_PAGE.toString());
-		driver.findElement(By.xpath(EXPath.INPUT_PLACEHOLDER_EMAIL_ADDRESS_MESSAGE.toString())).sendKeys("edureka@yahoo.com");
+		driver.findElement(By.xpath(EXPath.INPUT_PLACEHOLDER_EMAIL_ADDRESS_MESSAGE.toString())).sendKeys(ITextConstants.EDUREKA_TEST_EMAIL_ADDRESS);
 	}
 	
 }

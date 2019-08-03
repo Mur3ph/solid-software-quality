@@ -26,11 +26,11 @@ public class RunSeleniumChromeTest {
 
 		setupBrowser(driver);
 
-		Ebay ebay = new Ebay();
+//		Ebay ebay = new Ebay();
 		Myntra myntra = new Myntra();
-		ebay.findById(driver);
-		myntra.findByName(driver);
-		ebay.findByCSSSelector(driver);
+//		ebay.findById(driver);
+//		myntra.findByName(driver);
+//		ebay.findByCSSSelector(driver);
 		myntra.findByXPath(driver);
 
 		askToContinue();
