@@ -1,11 +1,9 @@
 package test.java.ie.murph.selenium.chrome;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 
 import test.java.ie.murph.selenium.driver.BrowserDriver;
 import test.java.ie.murph.selenium.page.domain.Ebay;
@@ -16,18 +14,20 @@ public class RunSeleniumChromeTest {
 
 	private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.class.getName());
 	private static final Scanner SCANNER = new Scanner(System.in);
+	private static BrowserDriver browserDriver;
 
 	public RunSeleniumChromeTest() {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		LOGGER.info("++main() thread");
-		BrowserDriver browserDriver = new BrowserDriver(Browser.GOOGLE_CHROME);
-//		EChromeDriver.setChromeDriver();
-//		WebDriver driver = EChromeDriver.launchChromeBrowserDriver();
-
-		setupBrowser(browserDriver.getBrowserDriver());
-
+		
+		browserDriver = new BrowserDriver(Browser.GOOGLE_CHROME);
+		browserDriver.setBrowserToMaxSize();
+		browserDriver.clearBrowserCookies();
+		browserDriver.setBrowserToTimeoutInSeconds(40);
+		browserDriver.setBrowserImpliciteWaitInSeconds(30);
+		
 		Ebay ebay = new Ebay();
 		Myntra myntra = new Myntra();
 		ebay.findById(browserDriver.getBrowserDriver());
@@ -36,14 +36,7 @@ public class RunSeleniumChromeTest {
 		myntra.findByXPath(browserDriver.getBrowserDriver());
 
 		askToContinue();
-		closeChromeBrowser(browserDriver.getBrowserDriver());
-	}
-
-	private static void setupBrowser(WebDriver driver) {
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		browserDriver.closeBrowser();
 	}
 
 	// Method to ask the user if they want to try again.
@@ -61,9 +54,4 @@ public class RunSeleniumChromeTest {
 			askToContinue();
 	}
 	
-	private static void closeChromeBrowser(WebDriver driver) {
-		LOGGER.info("++closeFirefoxBrowser()");
-		driver.close();
-	}
-
 }
