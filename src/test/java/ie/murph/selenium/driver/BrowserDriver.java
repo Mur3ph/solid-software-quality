@@ -16,52 +16,78 @@ public class BrowserDriver {
 	private static final Logger LOGGER = LogManager.getLogger(BrowserDriver.class.getName());
 	WebDriver driver;
 
-	public BrowserDriver() {}
-	
-	public BrowserDriver(WebDriver driver, Browser browser) {
-	    switch (browser) {
-	        case GOOGLE_CHROME:
-	        	instantiateChromeBrowserDriver(); 
-	            break;
-	        case MOZILLA_FIREFOX:
-	        	instantiateFireFoxBrowserDriver();
-	            break;
-	        default:
-	        	LOGGER.info("BROWSER NOT SUPPORTED");;
-	            break;
-	    }
+	public BrowserDriver() {
 	}
 
-    public void instantiateChromeBrowserDriver() {
-    	LOGGER.info("++instantiateChromeBrowserDriver()");
-    	driver = new ChromeDriver();
+	public BrowserDriver(Browser browser) {
+		LOGGER.info("++BrowserDriver(" + browser + ")");
+		switch (browser) {
+		case GOOGLE_CHROME:
+			setDriverSystemPropertyVariable(Browser.GOOGLE_CHROME);
+			instantiateChromeBrowserDriver();
+			break;
+		case MOZILLA_FIREFOX:
+			setDriverSystemPropertyVariable(Browser.MOZILLA_FIREFOX);
+			instantiateFireFoxBrowserDriver();
+			break;
+		default:
+			LOGGER.info("BROWSER NOT SUPPORTED");
+			;
+			break;
+		}
+	}
+
+	private void setDriverSystemPropertyVariable(Browser browser) {
+		LOGGER.info("++setDriverSystemPropertyVariable(" + browser + ")");
+		switch (browser) {
+		case GOOGLE_CHROME:
+			LOGGER.info("++Setting Chrome Driver System Variable Property");
+			setChromeDriverGlobalSyetemProperty();
+			break;
+		case MOZILLA_FIREFOX:
+			LOGGER.info("++Setting Firefox Driver System Variable Property");
+			setFirefoxDriverGlobalSyetemProperty();
+			break;
+		default:
+			LOGGER.info("NO DRIVER FOR THIS BROWSER");
+			;
+			break;
+		}
+	}
+
+	private void setChromeDriverGlobalSyetemProperty() {
+		LOGGER.info("++setChromeDriverGlobalSyetemProperty()");
+		// if you didn't update the Path system variable to add the full directory path
+		// to the executable as above mentioned then doing this directly through code
+		System.setProperty(EURLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString(),
+				EURLPathConstants.CHROME_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via
+																				// .properties or
+		LOGGER.info("setChromeDriverGlobalSyetemProperty() " + System.getProperty(EURLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString()));
+		LOGGER.info("setChromeDriverGlobalSyetemProperty() " + System.getProperties());
 	}
 	
-    public void instantiateFireFoxBrowserDriver() {
-    	LOGGER.info("++instantiateFireFoxBrowserDriver()");
-    	driver = new FirefoxDriver();
+	private void setFirefoxDriverGlobalSyetemProperty() {
+		LOGGER.info("++setFirefoxDriverGlobalSyetemProperty()");
+		System.setProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(),
+				EURLPathConstants.GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH.toString());
+		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
+		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperties());
 	}
-	
-	 public void setChromeDriverSystemVariableProperty() {
-	    	LOGGER.info("++setChromeDriverSystemVariableProperty()");
-			// if you didn't update the Path system variable to add the full directory path
-			// to the executable as above mentioned then doing this directly through code
-			// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
-			System.setProperty(EURLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString(), EURLPathConstants.CHROME_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
-			LOGGER.info(System.getProperty(EURLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString()));
-			LOGGER.info(System.getProperties());
-		}
-	 
-	 public  void setFirefoxGeckoDriverSystemVariableProperty() {
-	    	LOGGER.info("++setFirefoxGeckoDriverSystemVariableProperty()");
-			// if you didn't update the Path system variable to add the full directory path
-			// to the executable as above mentioned then doing this directly through code
-			// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
-			System.setProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(), EURLPathConstants.GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via .properties or .xml file
-			LOGGER.info(System.getProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
-			LOGGER.info(System.getProperties());
-		}
-	
+
+	private void instantiateChromeBrowserDriver() {
+		LOGGER.info("++instantiateChromeBrowserDriver()");
+		driver = new ChromeDriver();
+	}
+
+	private void instantiateFireFoxBrowserDriver() {
+		LOGGER.info("++instantiateFireFoxBrowserDriver()");
+		driver = new FirefoxDriver();
+	}
+
+	public WebDriver getBrowserDriver() {
+		return driver;
+	}
+
 	public void setBrowserToMaxSize() {
 		LOGGER.info("++setBrowserToMaxSize()");
 		driver.manage().window().maximize();
@@ -73,13 +99,13 @@ public class BrowserDriver {
 	}
 
 	public void setBrowserToTimeoutInSeconds(int seconds) {
-		LOGGER.info("++setBrowserToTimeoutInSeconds()");
+		LOGGER.info("++setBrowserToTimeoutInSeconds(" + seconds + ")");
 		driver.manage().timeouts().pageLoadTimeout(seconds, TimeUnit.SECONDS);
 	}
 
-	public void setBrowserImpliciteWaitInSeconds() {
-		LOGGER.info("++setBrowserImpliciteWaitInSeconds()");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	public void setBrowserImpliciteWaitInSeconds(int seconds) {
+		LOGGER.info("++setBrowserImpliciteWaitInSeconds(" + seconds + ")");
+		driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 	}
 
 	public void closeBrowser() {

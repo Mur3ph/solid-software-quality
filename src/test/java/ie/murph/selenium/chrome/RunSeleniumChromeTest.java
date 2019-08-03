@@ -7,9 +7,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import test.java.ie.murph.selenium.driver.singleton.EChromeDriver;
+import test.java.ie.murph.selenium.driver.BrowserDriver;
 import test.java.ie.murph.selenium.page.domain.Ebay;
 import test.java.ie.murph.selenium.page.domain.Myntra;
+import test.java.ie.murph.selenium.util.Browser;
 
 public class RunSeleniumChromeTest {
 
@@ -21,20 +22,21 @@ public class RunSeleniumChromeTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		LOGGER.info("++main() thread");
-		EChromeDriver.setChromeDriver();
-		WebDriver driver = EChromeDriver.launchChromeBrowserDriver();
+		BrowserDriver browserDriver = new BrowserDriver(Browser.GOOGLE_CHROME);
+//		EChromeDriver.setChromeDriver();
+//		WebDriver driver = EChromeDriver.launchChromeBrowserDriver();
 
-		setupBrowser(driver);
+		setupBrowser(browserDriver.getBrowserDriver());
 
-//		Ebay ebay = new Ebay();
+		Ebay ebay = new Ebay();
 		Myntra myntra = new Myntra();
-//		ebay.findById(driver);
-//		myntra.findByName(driver);
-//		ebay.findByCSSSelector(driver);
-		myntra.findByXPath(driver);
+		ebay.findById(browserDriver.getBrowserDriver());
+		myntra.findByName(browserDriver.getBrowserDriver());
+		ebay.findByCSSSelector(browserDriver.getBrowserDriver());
+		myntra.findByXPath(browserDriver.getBrowserDriver());
 
 		askToContinue();
-		closeChromeBrowser(driver);
+		closeChromeBrowser(browserDriver.getBrowserDriver());
 	}
 
 	private static void setupBrowser(WebDriver driver) {
