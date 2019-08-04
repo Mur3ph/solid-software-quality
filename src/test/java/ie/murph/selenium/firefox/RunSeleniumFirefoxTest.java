@@ -6,8 +6,6 @@ import org.apache.log4j.Logger;
 import test.java.ie.murph.selenium.driver.BrowserDriver;
 import test.java.ie.murph.selenium.page.domain.TourPage;
 import test.java.ie.murph.selenium.util.Browser;
-import test.java.ie.murph.selenium.util.EURLPathConstants;
-import test.java.ie.murph.selenium.util.ITextConstants;
 
 
 public class RunSeleniumFirefoxTest {
@@ -22,7 +20,9 @@ public class RunSeleniumFirefoxTest {
 		browserDriver.setBrowserImpliciteWaitInSeconds(10);
 
 		TourPage tourPage = new TourPage();
-		tourPage.runGetTitleTest(browserDriver.getBrowserDriver(), EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE);
+		tourPage.directToBaseURLOfToursPage(browserDriver.getBrowserDriver());
+		String actualTitle = tourPage.getTitleValueOfTourPage(browserDriver.getBrowserDriver());
+		tourPage.assertTitleName(actualTitle);
 		
 		LOGGER.info("--main() thread"); 
 	}

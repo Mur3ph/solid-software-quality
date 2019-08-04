@@ -1,36 +1,28 @@
 package test.java.ie.murph.selenium.page.domain;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
+import test.java.ie.murph.selenium.util.EURLPathConstants;
 import test.java.ie.murph.selenium.util.ITextConstants;
 
 public class TourPage {
 	private static final Logger LOGGER = LogManager.getLogger(TourPage.class.getName());
-	private String actualTitle;
+	private String expectedTitle = ITextConstants.GURU99_TOURS_EXPECTED_TITLE;
 
-	public void runGetTitleTest(WebDriver driver, String baseUrl, String expectedTitle) {
-		LOGGER.info("++runGetTitleTest()"); 
-		directToBaseURLOfToursPage(driver, baseUrl);
-		actualTitle = getTitleValueOfTourPage(driver);
-		assertTitleName(actualTitle, expectedTitle);
-	}
-	
-	private void directToBaseURLOfToursPage(WebDriver driver, String baseUrl) {
+	public void directToBaseURLOfToursPage(WebDriver driver) {
 		LOGGER.info("++directToBaseURLOfToursPage()");
-		driver.get(baseUrl);
+		driver.get(EURLPathConstants.GURU99_TOURS_BASE_URL.toString());
 	}
 
-	private String getTitleValueOfTourPage(WebDriver driver) {
+	public String getTitleValueOfTourPage(WebDriver driver) {
 		LOGGER.info("++getTitleValueOfTourPage()");
 		return driver.getTitle();
 	}
 
-	private void assertTitleName(String actualTitle, String expectedTitle) {
-		LOGGER.info("++assertTitleName()");
+	public void assertTitleName(String actualTitle) {
+		LOGGER.info("++assertTitleName(actualTitle: " + actualTitle + " expectedTitle: " + expectedTitle + ")");
 		if (actualTitle.contentEquals(expectedTitle)) {
 			LOGGER.info(ITextConstants.GURU99_TOURS_TEST_PASSED);
 		} else {
