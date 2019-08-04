@@ -44,10 +44,4 @@ public class TourPage {
 			LOGGER.info(ITextConstants.GURU99_TOURS_TEST_FAILED);
 		}
 	}
-	
-	private void closeFirefoxBrowser(WebDriver driver) {
-		LOGGER.info("++closeFirefoxBrowser()");
-		driver.close();
-	}
-	
 }
