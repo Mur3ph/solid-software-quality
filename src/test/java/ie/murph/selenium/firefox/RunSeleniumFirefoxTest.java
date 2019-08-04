@@ -19,6 +19,7 @@ public class RunSeleniumFirefoxTest {
 	public static void main(String[] args) {
 		LOGGER.info("++main() thread"); 
 		browserDriver = new BrowserDriver(Browser.MOZILLA_FIREFOX);
+		browserDriver.setBrowserImpliciteWaitInSeconds(10);
 
 		TourPage tourPage = new TourPage();
 		tourPage.runGetTitleTest(browserDriver.getBrowserDriver(), EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE);
