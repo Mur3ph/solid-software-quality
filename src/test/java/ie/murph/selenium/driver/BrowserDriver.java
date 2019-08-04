@@ -32,7 +32,6 @@ public class BrowserDriver {
 			break;
 		default:
 			LOGGER.info("BROWSER NOT SUPPORTED");
-			;
 			break;
 		}
 	}
@@ -50,7 +49,6 @@ public class BrowserDriver {
 			break;
 		default:
 			LOGGER.info("NO DRIVER FOR THIS BROWSER");
-			;
 			break;
 		}
 	}
