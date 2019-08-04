@@ -10,14 +10,14 @@ import test.java.ie.murph.selenium.util.ITextConstants;
 
 public class TourPage {
 	private static final Logger LOGGER = LogManager.getLogger(TourPage.class.getName());
+	String actualTitle;
 
-	public void runGetTitleTest(WebDriver driver, String baseUrl, String expectedTitle, String actualTitle) {
+	public void runGetTitleTest(WebDriver driver, String baseUrl, String expectedTitle) {
 		LOGGER.info("++runGetTitleTest()"); 
 		keepBrowserOpenForNumberOfSeconds(driver);
 		directToBaseURLOfToursPage(driver, baseUrl);
 		actualTitle = getTitleValueOfTourPage(driver);
-		assertTitleName(actualTitle, actualTitle);
-		closeFirefoxBrowser(driver);
+		assertTitleName(actualTitle, expectedTitle);
 	}
 	
 	private void keepBrowserOpenForNumberOfSeconds(WebDriver driver) {

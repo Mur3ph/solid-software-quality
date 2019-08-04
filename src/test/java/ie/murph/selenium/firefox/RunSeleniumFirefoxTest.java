@@ -20,10 +20,9 @@ public class RunSeleniumFirefoxTest {
 		LOGGER.info("++main() thread"); 
 		browserDriver = new BrowserDriver(Browser.MOZILLA_FIREFOX);
 
-		String actualTitle = "";
-		
 		TourPage tourPage = new TourPage();
-		tourPage.runGetTitleTest(browserDriver.getBrowserDriver(), EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE, actualTitle);
+		tourPage.runGetTitleTest(browserDriver.getBrowserDriver(), EURLPathConstants.GURU99_TOURS_BASE_URL.toString(), ITextConstants.GURU99_TOURS_EXPECTED_TITLE);
+		
 		LOGGER.info("--main() thread"); 
 	}
 
