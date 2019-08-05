@@ -4,7 +4,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import test.java.ie.murph.selenium.util.EURLPathConstants;
+import test.java.ie.murph.selenium.util.URLPathConstants;
 import test.java.ie.murph.selenium.util.ITextConstants;
 
 public class TourPage {
@@ -13,7 +13,7 @@ public class TourPage {
 
 	public void directToBaseURLOfToursPage(WebDriver driver) {
 		LOGGER.info("++directToBaseURLOfToursPage()");
-		driver.get(EURLPathConstants.GURU99_TOURS_BASE_URL.toString());
+		driver.get(URLPathConstants.GURU99_TOURS_BASE_URL.toString());
 	}
 
 	public String getTitleValueOfTourPage(WebDriver driver) {

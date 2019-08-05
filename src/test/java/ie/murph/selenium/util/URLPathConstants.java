@@ -3,9 +3,9 @@ package test.java.ie.murph.selenium.util;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import test.java.ie.murph.selenium.driver.singleton.EGeckoDriver;
+import test.java.ie.murph.selenium.driver.singleton.GeckoDriverEnum;
 
-public enum EURLPathConstants
+public enum URLPathConstants
 {
 	GECKO_WEB_DRIVER_PROPERTY("webdriver.gecko.driver"),
 	CHROME_WEB_DRIVER_PROPERTY("webdriver.chrome.driver"),
@@ -20,10 +20,10 @@ public enum EURLPathConstants
 	MYNTRA_HOME_PAGE("https://www.myntra.com/"),
 	EBAY_HOME_PAGE("https://www.ebay.ie/");
 	
-	private static final Logger LOGGER = LogManager.getLogger(EGeckoDriver.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(GeckoDriverEnum.class.getName());
 	private final String text;
 
-    private EURLPathConstants(final String text) 
+    private URLPathConstants(final String text) 
     {
         this.text = text;
     }

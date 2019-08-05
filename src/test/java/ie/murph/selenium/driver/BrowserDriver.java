@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import test.java.ie.murph.selenium.util.Browser;
-import test.java.ie.murph.selenium.util.EURLPathConstants;
+import test.java.ie.murph.selenium.util.URLPathConstants;
 
 public class BrowserDriver {
 
@@ -57,18 +57,18 @@ public class BrowserDriver {
 		LOGGER.info("++setChromeDriverGlobalSyetemProperty()");
 		// if you didn't update the Path system variable to add the full directory path
 		// to the executable as above mentioned then doing this directly through code
-		System.setProperty(EURLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString(),
-				EURLPathConstants.CHROME_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via
+		System.setProperty(URLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString(),
+				URLPathConstants.CHROME_WEB_DRIVER_EXE_JAR_PATH.toString()); // look into setting up via
 																				// .properties or
-		LOGGER.info("setChromeDriverGlobalSyetemProperty() " + System.getProperty(EURLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString()));
+		LOGGER.info("setChromeDriverGlobalSyetemProperty() " + System.getProperty(URLPathConstants.CHROME_WEB_DRIVER_PROPERTY.toString()));
 		LOGGER.info("setChromeDriverGlobalSyetemProperty() " + System.getProperties());
 	}
 	
 	private void setFirefoxDriverGlobalSyetemProperty() {
 		LOGGER.info("++setFirefoxDriverGlobalSyetemProperty()");
-		System.setProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(),
-				EURLPathConstants.GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH.toString());
-		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperty(EURLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
+		System.setProperty(URLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString(),
+				URLPathConstants.GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH.toString());
+		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperty(URLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
 		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperties());
 	}
 
