@@ -480,3 +480,12 @@
 2019-08-04 21:54:06 INFO  RunSeleniumFirefoxTest:27 - --main() thread
 2019-08-05 22:27:03 INFO  EGeckoDriver:34 - ++toString()
 2019-08-05 22:27:03 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:31:18 INFO  RunInternetExplorerTest:14 - ++main() thread[Ljava.lang.String;@66a29884
+2019-08-05 22:31:18 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:31:18 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:31:43 INFO  RunInternetExplorerTest:14 - ++main() thread[Ljava.lang.String;@66a29884
+2019-08-05 22:31:43 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:31:43 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:32:10 INFO  RunInternetExplorerTest:14 - ++main() thread0
+2019-08-05 22:32:10 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:32:10 INFO  EGeckoDriver:34 - ++toString()
