@@ -478,3 +478,5 @@
 2019-08-04 21:54:06 INFO  TourPage:25 - ++assertTitleName(actualTitle: Welcome: Mercury Tours expectedTitle: Welcome: Mercury Tours)
 2019-08-04 21:54:06 INFO  TourPage:27 - Test Passed!
 2019-08-04 21:54:06 INFO  RunSeleniumFirefoxTest:27 - --main() thread
+2019-08-05 22:27:03 INFO  EGeckoDriver:34 - ++toString()
+2019-08-05 22:27:03 INFO  EGeckoDriver:34 - ++toString()
