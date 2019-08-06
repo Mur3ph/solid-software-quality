@@ -30,6 +30,9 @@ public class BrowserDriver {
 			setDriverSystemPropertyVariable(Browser.MOZILLA_FIREFOX);
 			instantiateFireFoxBrowserDriver();
 			break;
+		case INTERNET_EXPLORER:
+			setDriverSystemPropertyVariable(Browser.INTERNET_EXPLORER);
+			break;
 		default:
 			LOGGER.info("BROWSER NOT SUPPORTED");
 			break;
@@ -46,6 +49,10 @@ public class BrowserDriver {
 		case MOZILLA_FIREFOX:
 			LOGGER.info("++Setting Firefox Driver System Variable Property");
 			setFirefoxDriverGlobalSyetemProperty();
+			break;
+		case INTERNET_EXPLORER:
+			LOGGER.info("++Setting Internet Explorer Driver System Variable Property");
+			setInternetExplorerDriverGlobalSyetemProperty();
 			break;
 		default:
 			LOGGER.info("NO DRIVER FOR THIS BROWSER");
@@ -70,6 +77,13 @@ public class BrowserDriver {
 				URLPathConstants.GECKO_FIREFOX_WEB_DRIVER_EXE_JAR_PATH.toString());
 		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperty(URLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
 		LOGGER.info("setFirefoxDriverGlobalSyetemProperty() " + System.getProperties());
+	}
+	
+	private void setInternetExplorerDriverGlobalSyetemProperty() {
+		LOGGER.info("++setInternetExplorerDriverGlobalSyetemProperty()");
+		System.setProperty(URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_PROPERTY.toString(), URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_EXE_JAR_PATH.toString());
+		LOGGER.info("setInternetExplorerDriverGlobalSyetemProperty() " + System.getProperty(URLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
+		LOGGER.info("setInternetExplorerDriverGlobalSyetemProperty() " + System.getProperties());
 	}
 
 	private void instantiateChromeBrowserDriver() {
