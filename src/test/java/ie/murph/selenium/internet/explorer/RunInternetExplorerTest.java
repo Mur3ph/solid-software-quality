@@ -15,7 +15,7 @@ public class RunInternetExplorerTest {
 		System.setProperty(URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_PROPERTY.toString(), URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_EXE_JAR_PATH.toString());
 
 		WebDriver driver = new InternetExplorerDriver();
-		driver.get("https://www.google.com");
+		driver.get(URLPathConstants.GOOGLE.toString());
 	}
 
 }

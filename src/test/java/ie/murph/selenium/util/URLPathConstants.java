@@ -18,7 +18,8 @@ public enum URLPathConstants
 	GURU99_TOURS_BASE_URL("http://demo.guru99.com/test/newtours/"),
 	MYNTRA_LOGIN_PAGE("https://www.myntra.com/login?referer=https://www.myntra.com/"),
 	MYNTRA_HOME_PAGE("https://www.myntra.com/"),
-	EBAY_HOME_PAGE("https://www.ebay.ie/");
+	EBAY_HOME_PAGE("https://www.ebay.ie/"),
+	GOOGLE("https://www.google.com");
 	
 	private static final Logger LOGGER = LogManager.getLogger(GeckoDriverEnum.class.getName());
 	private final String text;
