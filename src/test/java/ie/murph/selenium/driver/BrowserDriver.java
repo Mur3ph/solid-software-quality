@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import test.java.ie.murph.selenium.util.Browser;
 import test.java.ie.murph.selenium.util.URLPathConstants;
@@ -16,8 +17,7 @@ public class BrowserDriver {
 	private static final Logger LOGGER = LogManager.getLogger(BrowserDriver.class.getName());
 	WebDriver driver;
 
-	public BrowserDriver() {
-	}
+	public BrowserDriver() {}
 
 	public BrowserDriver(Browser browser) {
 		LOGGER.info("++BrowserDriver(" + browser + ")");
@@ -32,6 +32,7 @@ public class BrowserDriver {
 			break;
 		case INTERNET_EXPLORER:
 			setDriverSystemPropertyVariable(Browser.INTERNET_EXPLORER);
+			instantiateInternetExplorerBrowserDriver();
 			break;
 		default:
 			LOGGER.info("BROWSER NOT SUPPORTED");
@@ -94,6 +95,11 @@ public class BrowserDriver {
 	private void instantiateFireFoxBrowserDriver() {
 		LOGGER.info("++instantiateFireFoxBrowserDriver()");
 		driver = new FirefoxDriver();
+	}
+	
+	private void instantiateInternetExplorerBrowserDriver() {
+		LOGGER.info("++instantiateFireFoxBrowserDriver()");
+		driver = new InternetExplorerDriver();
 	}
 
 	public WebDriver getBrowserDriver() {
