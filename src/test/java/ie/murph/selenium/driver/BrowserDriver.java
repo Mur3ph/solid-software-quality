@@ -15,7 +15,7 @@ import test.java.ie.murph.selenium.util.URLPathConstants;
 public class BrowserDriver {
 
 	private static final Logger LOGGER = LogManager.getLogger(BrowserDriver.class.getName());
-	WebDriver driver;
+	private static WebDriver driver;
 
 	public BrowserDriver() {}
 
