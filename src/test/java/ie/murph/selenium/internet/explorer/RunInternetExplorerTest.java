@@ -13,7 +13,7 @@ public class RunInternetExplorerTest {
 
 	public static void main(String[] args) {
 		LOGGER.info("++main() thread" + args.length);
-		browserDriver = new BrowserDriver(Browser.GOOGLE_CHROME);
+		browserDriver = new BrowserDriver(Browser.INTERNET_EXPLORER);
 		browserDriver.getBrowserDriver().get(URLPathConstants.GOOGLE.toString());
 	}
 }
