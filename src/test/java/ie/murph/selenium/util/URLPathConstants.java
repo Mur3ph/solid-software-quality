@@ -3,8 +3,6 @@ package test.java.ie.murph.selenium.util;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import test.java.ie.murph.selenium.driver.singleton.GeckoDriverEnum;
-
 public enum URLPathConstants
 {
 	GECKO_WEB_DRIVER_PROPERTY("webdriver.gecko.driver"),
@@ -21,7 +19,7 @@ public enum URLPathConstants
 	EBAY_HOME_PAGE("https://www.ebay.ie/"),
 	GOOGLE("https://www.google.com");
 	
-	private static final Logger LOGGER = LogManager.getLogger(GeckoDriverEnum.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(URLPathConstants.class.getName());
 	private final String text;
 
     private URLPathConstants(final String text) 
