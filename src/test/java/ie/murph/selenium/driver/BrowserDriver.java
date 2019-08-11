@@ -12,7 +12,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import test.java.ie.murph.selenium.util.Browser;
 import test.java.ie.murph.selenium.util.URLPathConstants;
 
-public class BrowserDriver {
+public class BrowserDriver{
 
 	private static final Logger LOGGER = LogManager.getLogger(BrowserDriver.class.getName());
 	private static WebDriver driver;
