@@ -1,26 +1,18 @@
 package test.java.ie.murph.selenium.driver.singleton;
 
-
-import java.util.List;
-import java.util.Set;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import test.java.ie.murph.selenium.driver.ABrowserDriver;
 import test.java.ie.murph.selenium.driver.IDriver;
 import test.java.ie.murph.selenium.util.URLPathConstants;
 
-public class ChromeDriver implements IDriver {
+public class ChromeBrowserDriver implements IDriver {
 	private static final Logger LOGGER = LogManager.getLogger(ChromeDriver.class.getName());
-	private ABrowserDriver aBrowserDriver;
+	private static WebDriver driver;
 	
-	public ChromeDriver() {
-		this.aBrowserDriver = new ABrowserDriver();
-	}
+	public ChromeBrowserDriver() {}
 
 	@Override
 	public void setChromeDriverGlobalSyetemProperty() {
@@ -38,7 +30,7 @@ public class ChromeDriver implements IDriver {
 	@Override
 	public void instantiateChromeBrowserDriver() {
 		LOGGER.info("++instantiateChromeBrowserDriver()");
-		aBrowserDriver = new ChromeDriver();
+		driver = new ChromeDriver();
 	}
 
 }
