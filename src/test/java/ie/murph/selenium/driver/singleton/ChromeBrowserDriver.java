@@ -14,7 +14,7 @@ public class ChromeBrowserDriver implements IDriver {
 	public ChromeBrowserDriver() {}
 
 	@Override
-	public void setChromeDriverGlobalSyetemProperty() {
+	public void setBrowserDriverGlobalSyetemProperty() {
 		LOGGER.info("++setChromeDriverGlobalSyetemProperty()");
 		// if you didn't update the Path system variable to add the full directory path
 		// to the executable as above mentioned then doing this directly through code
@@ -27,7 +27,7 @@ public class ChromeBrowserDriver implements IDriver {
 	}
 
 	@Override
-	public WebDriver instantiateChromeBrowserDriver() {
+	public WebDriver instantiateBrowserDriver() {
 		LOGGER.info("++instantiateChromeBrowserDriver()");
 		return new ChromeDriver();
 	}

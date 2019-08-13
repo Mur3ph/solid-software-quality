@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public interface IDriver{
 	
-	void setChromeDriverGlobalSyetemProperty();
-	WebDriver instantiateChromeBrowserDriver();
+	void setBrowserDriverGlobalSyetemProperty();
+	WebDriver instantiateBrowserDriver();
 
 }
