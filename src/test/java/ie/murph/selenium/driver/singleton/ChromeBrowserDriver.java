@@ -2,6 +2,7 @@ package test.java.ie.murph.selenium.driver.singleton;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import test.java.ie.murph.selenium.driver.IDriver;
@@ -26,7 +27,7 @@ public class ChromeBrowserDriver implements IDriver {
 	}
 
 	@Override
-	public ChromeDriver instantiateChromeBrowserDriver() {
+	public WebDriver instantiateChromeBrowserDriver() {
 		LOGGER.info("++instantiateChromeBrowserDriver()");
 		return new ChromeDriver();
 	}
