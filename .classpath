@@ -18,5 +18,17 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cobertura-2.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-core-4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-core-4.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-html-0.2.7.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-java-4.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-junit-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-jvm-deps-1.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/cucumber-reporting-4.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/gherkin-5.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/hamcrest-core-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/dev/jars/junit-jupiter-api-5.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
