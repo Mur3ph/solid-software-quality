@@ -8,5 +8,5 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features="Features",glue={"classpath:com/runner", "classpath:com/stepdefinition"})						
 public class Runner 				
 {		
-
+	
 }
