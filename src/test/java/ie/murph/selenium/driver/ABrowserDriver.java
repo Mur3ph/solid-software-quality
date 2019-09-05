@@ -6,6 +6,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
+//Class to keep all driver api methods and functions 
 public class ABrowserDriver{
 
 	private static final Logger LOGGER = LogManager.getLogger(ABrowserDriver.class.getName());
