@@ -4,7 +4,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import test.java.ie.murph.selenium.driver.BrowserDriver;
-import test.java.ie.murph.selenium.util.Browser;
+import test.java.ie.murph.selenium.driver.singleton.Browser;
 import test.java.ie.murph.selenium.util.URLPathConstants;
 
 public class RunInternetExplorerTest {

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import test.java.ie.murph.selenium.util.Browser;
+import test.java.ie.murph.selenium.driver.singleton.Browser;
 import test.java.ie.murph.selenium.util.URLPathConstants;
 
 public class BrowserDriver{

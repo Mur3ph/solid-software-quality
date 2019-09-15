@@ -1,4 +1,4 @@
-package test.java.ie.murph.selenium.util;
+package test.java.ie.murph.selenium.driver.singleton;
 
 public enum Browser {
 	
