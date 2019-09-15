@@ -5,7 +5,6 @@
 	<artifactId>software-quality</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-
 	<dependencies>
 
 		<dependency>
@@ -28,6 +27,18 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-core</artifactId>
+			<version>${jmh.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-generator-annprocess</artifactId>
+			<version>${jmh.version}</version>
+		</dependency>
+
 		<!-- <dependency> <groupId>io.qameta.allure</groupId> <artifactId>allure-cucumber-jvm</artifactId> 
 			<version>2.0-BETA16</version> </dependency> -->
 
@@ -35,6 +46,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<jmh.version>1.21</jmh.version>
 	</properties>
 
 
