@@ -1,4 +1,4 @@
-package test.java.ie.murph.collections;
+package test.java.ie.murph.collections.maps;
 
 import java.util.HashMap;
 import java.util.Hashtable;
