@@ -1,8 +1,11 @@
 package test.java.ie.murph.performance.iterators;
 
+import org.openjdk.jmh.annotations.Benchmark;
+
 public class LoopVersusStream {
 	
 //	https://dzone.com/articles/java-performance-for-looping-vs-streaming
+//	https://www.baeldung.com/java-microbenchmark-harness
 
 	private static final int ITERATIONS = 10_000;
 	
@@ -11,7 +14,7 @@ public class LoopVersusStream {
 		System.out.println(loopVersusStream.forUp());
 	}
 
-//	@Benchmark
+	@Benchmark
 	public int forUp() {
 		int sum = 0;
 		for (int i = 0; i < ITERATIONS; i++) {
