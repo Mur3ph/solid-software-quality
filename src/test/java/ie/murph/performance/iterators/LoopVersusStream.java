@@ -1,7 +1,5 @@
 package test.java.ie.murph.performance.iterators;
 
-import org.openjdk.jmh.annotations.*;
-
 public class LoopVersusStream {
 	
 //	https://dzone.com/articles/java-performance-for-looping-vs-streaming
