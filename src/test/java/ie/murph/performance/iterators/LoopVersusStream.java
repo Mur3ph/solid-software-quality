@@ -2,7 +2,7 @@ package test.java.ie.murph.performance.iterators;
 
 import java.util.stream.IntStream;
 
-import org.openjdk.jmh.annotations.Benchmark;
+//import org.openjdk.jmh.annotations.Benchmark;
 
 public class LoopVersusStream {
 
@@ -16,7 +16,7 @@ public class LoopVersusStream {
 //		System.out.println(loopVersusStream.forUp());
 //	}
 
-	@Benchmark
+//	@Benchmark
 	public int forUp() {
 		int sum = 0;
 		for (int i = 0; i < ITERATIONS; i++) {
@@ -25,7 +25,7 @@ public class LoopVersusStream {
 		return sum;
 	}
 
-	@Benchmark
+//	@Benchmark
 	public int forDown() {
 		int sum = 0;
 		for (int i = ITERATIONS; i-- > 0;) {
@@ -34,13 +34,13 @@ public class LoopVersusStream {
 		return sum;
 	}
 	
-	@Benchmark
+//	@Benchmark
 	public int stream() {
 	    return IntStream.range(0, ITERATIONS)
 	        .sum();
 	}
 	
-	@Benchmark
+//	@Benchmark
 	public int math() {
 	    return ITERATIONS * (ITERATIONS + 1) / 2;
 	}
