@@ -6,20 +6,30 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeMap;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class Sorting {
 	
+	MapCollection mapCollection;
+	
+	@Before 
+	public void createOutputFile() 
+    { 
+		mapCollection = new MapCollection();
+    }
+	
 	@Test
 	public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect() {
-	    TreeMap<Integer, String> map = new TreeMap<>();
-	    map.put(3, "val");
-	    map.put(2, "val");
-	    map.put(1, "val");
-	    map.put(5, "val");
-	    map.put(4, "val");
+		mapCollection.setTreeMap();
+	    TreeMap<Integer, String> treeMap = mapCollection.getTreeMap();
+	    treeMap.put(3, "val");
+	    treeMap.put(2, "val");
+	    treeMap.put(1, "val");
+	    treeMap.put(5, "val");
+	    treeMap.put(4, "val");
 	 
-	    assertEquals("[1, 2, 3, 4, 5]", map.keySet().toString());
+	    assertEquals("[1, 2, 3, 4, 5]", treeMap.keySet().toString());
 	}
 	
 	@Test

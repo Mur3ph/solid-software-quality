@@ -8,26 +8,27 @@ import java.util.TreeMap;
 
 public class MapCollection {
 	
-	private Map<Object, Object> map;
+	private Map<?, ?> map;
 	
-	public void createTreeMap() {
-		map = new TreeMap<Object, Object>();
+	public void setTreeMap() {
+		map = new TreeMap<Integer, String>();
 	}
 	
-	public void createHashMap() {
-		map = new HashMap<Object, Object>();
+	public void setHashMap() {
+		map = new HashMap<Integer, String>();
 	}
 	
-	public void createLinkedHashMap() {
-		map = new LinkedHashMap<Object, Object>();
+	public void setLinkedHashMap() {
+		map = new LinkedHashMap<Integer, String>();
 	}
 	
-	public void createHashTable() {
-		map = new Hashtable<Object, Object>();
+	public void setHashTable() {
+		map = new Hashtable<Integer, String>();
 	}
 	
-	public Map<Object, Object> getMap(){
-		return map;
+	@SuppressWarnings("unchecked")
+	public TreeMap<Integer, String> getTreeMap() {
+		return (TreeMap<Integer, String>) map;
 	}
-
+	
 }
