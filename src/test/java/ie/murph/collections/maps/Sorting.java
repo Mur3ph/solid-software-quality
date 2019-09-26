@@ -21,8 +21,8 @@ public class Sorting {
 	
 	@Test
 	public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect() {
-		mapCollection.setTreeMap();
-	    TreeMap<Integer, String> treeMap = mapCollection.getTreeMap();
+		mapCollection.setTreeMap(new TreeMap<Integer, String>());
+	    TreeMap<Integer, String> treeMap = (TreeMap<Integer, String>) mapCollection.getTreeMap();
 	    treeMap.put(3, "val");
 	    treeMap.put(2, "val");
 	    treeMap.put(1, "val");
