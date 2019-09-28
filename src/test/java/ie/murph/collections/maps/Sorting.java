@@ -19,10 +19,11 @@ public class Sorting {
 		mapCollection = new MapCollection();
     }
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect() {
 		mapCollection.setTreeMap(new TreeMap<Integer, String>());
-	    TreeMap<Integer, String> treeMap = (TreeMap<Integer, String>) mapCollection.getTreeMap();
+	    TreeMap<Integer, String> treeMap = (TreeMap<Integer, String>) mapCollection.getMap();
 	    treeMap.put(3, "val");
 	    treeMap.put(2, "val");
 	    treeMap.put(1, "val");

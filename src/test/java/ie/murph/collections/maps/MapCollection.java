@@ -25,7 +25,7 @@ public class MapCollection {
 		m_map = new Hashtable<Integer, String>();
 	}
 	
-	public  Map<?, ?> getTreeMap() {
+	public  Map<?, ?> getMap() {
 		return m_map;
 	}
 	
