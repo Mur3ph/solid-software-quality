@@ -47,37 +47,39 @@ public class Sorting {
 	    assertEquals("[a, b, c, d, e]", treeMap.keySet().toString());
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void comparatorOrderTreemapNumbersTest() {
-	    TreeMap<Integer, String> map = 
-	      new TreeMap<>(Comparator.reverseOrder());
-	    map.put(3, "val");
-	    map.put(2, "val");
-	    map.put(1, "val");
-	    map.put(5, "val");
-	    map.put(4, "val");
+		mapCollection.setTreeMap(new TreeMap<Integer, String>(Comparator.reverseOrder()));
+	    TreeMap<Integer, String> treeMapComparator = (TreeMap<Integer, String>) mapCollection.getMap();
+	    treeMapComparator.put(3, "val");
+	    treeMapComparator.put(2, "val");
+	    treeMapComparator.put(1, "val");
+	    treeMapComparator.put(5, "val");
+	    treeMapComparator.put(4, "val");
 	         
-	    assertEquals("[5, 4, 3, 2, 1]", map.keySet().toString());
+	    assertEquals("[5, 4, 3, 2, 1]", treeMapComparator.keySet().toString());
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void performanceQueriesOrderTreemapNumbersTest() {
-	    TreeMap<Integer, String> map = new TreeMap<>();
-	    map.put(3, "val");
-	    map.put(2, "val");
-	    map.put(1, "val");
-	    map.put(5, "val");
-	    map.put(4, "val");
+		mapCollection.setTreeMap(new TreeMap<Integer, String>());
+	    TreeMap<Integer, String> treemapPerformanceQueries = (TreeMap<Integer, String>) mapCollection.getMap();
+	    treemapPerformanceQueries.put(3, "val");
+	    treemapPerformanceQueries.put(2, "val");
+	    treemapPerformanceQueries.put(1, "val");
+	    treemapPerformanceQueries.put(5, "val");
+	    treemapPerformanceQueries.put(4, "val");
 	         
-	    Integer highestKey = map.lastKey();
-	    Integer lowestKey = map.firstKey();
-	    Set<Integer> keysLessThan3 = map.headMap(3).keySet();
-	    Set<Integer> keysGreaterThanEqTo3 = map.tailMap(3).keySet();
+	    Integer highestKey = treemapPerformanceQueries.lastKey();
+	    Integer lowestKey = treemapPerformanceQueries.firstKey();
+	    Set<Integer> keysLessThan3 = treemapPerformanceQueries.headMap(3).keySet();
+	    Set<Integer> keysGreaterThanEqTo3 = treemapPerformanceQueries.tailMap(3).keySet();
 	 
 	    assertEquals(new Integer(5), highestKey);
 	    assertEquals(new Integer(1), lowestKey);
 	    assertEquals("[1, 2]", keysLessThan3.toString());
 	    assertEquals("[3, 4, 5]", keysGreaterThanEqTo3.toString());
 	}
-
 }
