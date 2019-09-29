@@ -21,7 +21,7 @@ public class Sorting {
 	
 	@SuppressWarnings("unchecked")
 	@Test
-	public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect() {
+	public void naturalOrderTreemapNumbersTest() {
 		mapCollection.setTreeMap(new TreeMap<Integer, String>());
 	    TreeMap<Integer, String> treeMap = (TreeMap<Integer, String>) mapCollection.getMap();
 	    treeMap.put(3, "val");
@@ -33,20 +33,22 @@ public class Sorting {
 	    assertEquals("[1, 2, 3, 4, 5]", treeMap.keySet().toString());
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
-	public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect2() {
-	    TreeMap<String, String> map = new TreeMap<>();
-	    map.put("c", "val");
-	    map.put("b", "val");
-	    map.put("a", "val");
-	    map.put("e", "val");
-	    map.put("d", "val");
+	public void naturalOrderTreemapLettersTest() {
+		mapCollection.setTreeMap(new TreeMap<String, String>());
+	    TreeMap<String, String> treeMap =  (TreeMap<String, String>) mapCollection.getMap();
+	    treeMap.put("c", "val");
+	    treeMap.put("b", "val");
+	    treeMap.put("a", "val");
+	    treeMap.put("e", "val");
+	    treeMap.put("d", "val");
 	 
-	    assertEquals("[a, b, c, d, e]", map.keySet().toString());
+	    assertEquals("[a, b, c, d, e]", treeMap.keySet().toString());
 	}
 	
 	@Test
-	public void givenTreeMap_whenOrdersEntriesByComparator_thenCorrect() {
+	public void comparatorOrderTreemapNumbersTest() {
 	    TreeMap<Integer, String> map = 
 	      new TreeMap<>(Comparator.reverseOrder());
 	    map.put(3, "val");
@@ -59,7 +61,7 @@ public class Sorting {
 	}
 	
 	@Test
-	public void givenTreeMap_whenPerformsQueries_thenCorrect() {
+	public void performanceQueriesOrderTreemapNumbersTest() {
 	    TreeMap<Integer, String> map = new TreeMap<>();
 	    map.put(3, "val");
 	    map.put(2, "val");
