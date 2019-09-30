@@ -17,7 +17,7 @@ public class BrowserDriver{
 	private static final Logger LOGGER = LogManager.getLogger(BrowserDriver.class.getName());
 	private static WebDriver driver;
 
-//	TRying to extract this class out in many classes and create and factory class
+//	Trying to extract this class out in many classes and create and factory class
 	public BrowserDriver() {}
 
 	public BrowserDriver(Browser browser) {
