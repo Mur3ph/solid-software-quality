@@ -7,9 +7,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import test.java.ie.murph.selenium.driver.IDriver;
 import test.java.ie.murph.selenium.util.URLPathConstants;
 
-public class FirefoxDriverEnum implements IDriver{
+public class FirefoxBrowserDriver implements IDriver{
 	
-    private static final Logger LOGGER = LogManager.getLogger(FirefoxDriverEnum.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(FirefoxBrowserDriver.class.getName());
     
     @Override
     public void setBrowserDriverGlobalSyetemProperty() {

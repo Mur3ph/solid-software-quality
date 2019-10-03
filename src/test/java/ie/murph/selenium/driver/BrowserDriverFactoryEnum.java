@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import test.java.ie.murph.selenium.driver.singleton.Browser;
 import test.java.ie.murph.selenium.driver.singleton.ChromeBrowserDriver;
+import test.java.ie.murph.selenium.driver.singleton.FirefoxBrowserDriver;
 
 public enum BrowserDriverFactoryEnum {
 
@@ -23,9 +24,9 @@ public enum BrowserDriverFactoryEnum {
 			iDriver.instantiateBrowserDriver();
 			break;
 		case MOZILLA_FIREFOX:
-//			iDriver = new FirefoxDriverEnum();
-//			iDriver.setBrowserDriverGlobalSyetemProperty();
-//			iDriver.instantiateBrowserDriver();
+			iDriver = new FirefoxBrowserDriver();
+			iDriver.setBrowserDriverGlobalSyetemProperty();
+			iDriver.instantiateBrowserDriver();
 			break;
 		case INTERNET_EXPLORER:
 //			iDriver.setBrowserDriverGlobalSyetemProperty();
