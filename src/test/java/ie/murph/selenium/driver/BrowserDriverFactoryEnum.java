@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 import test.java.ie.murph.selenium.driver.singleton.Browser;
+import test.java.ie.murph.selenium.driver.singleton.ChromeBrowserDriver;
 
 public enum BrowserDriverFactoryEnum {
 
@@ -12,20 +13,23 @@ public enum BrowserDriverFactoryEnum {
 	private static final Logger LOGGER = LogManager.getLogger(BrowserDriverFactoryEnum.class.getName());
 
 	public synchronized WebDriver createBrowserDriver(Browser browser) {
+		IDriver iDriver;
 
 		LOGGER.info("++createBrowserDriver(" + browser + ")");
 		switch (browser) {
 		case GOOGLE_CHROME:
-			// setDriverSystemPropertyVariable(Browser.GOOGLE_CHROME);
-			// instantiateChromeBrowserDriver();
+			iDriver = new ChromeBrowserDriver();
+			iDriver.setBrowserDriverGlobalSyetemProperty();
+			iDriver.instantiateBrowserDriver();
 			break;
 		case MOZILLA_FIREFOX:
-			// setDriverSystemPropertyVariable(Browser.MOZILLA_FIREFOX);
-			// instantiateFireFoxBrowserDriver();
+//			iDriver = new FirefoxDriverEnum();
+//			iDriver.setBrowserDriverGlobalSyetemProperty();
+//			iDriver.instantiateBrowserDriver();
 			break;
 		case INTERNET_EXPLORER:
-			// setDriverSystemPropertyVariable(Browser.INTERNET_EXPLORER);
-			// instantiateInternetExplorerBrowserDriver();
+//			iDriver.setBrowserDriverGlobalSyetemProperty();
+//			iDriver.instantiateBrowserDriver();
 			break;
 		default:
 			LOGGER.info("BROWSER NOT SUPPORTED");
