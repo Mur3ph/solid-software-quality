@@ -4,9 +4,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import test.java.ie.murph.selenium.driver.singleton.Browser;
-import test.java.ie.murph.selenium.driver.singleton.ChromeBrowserDriver;
-import test.java.ie.murph.selenium.driver.singleton.FirefoxBrowserDriver;
+import test.java.ie.murph.selenium.driver.singleton.*;
 
 public enum BrowserDriverFactoryEnum {
 
@@ -29,9 +27,9 @@ public enum BrowserDriverFactoryEnum {
 			iDriver.instantiateBrowserDriver();
 			break;
 		case INTERNET_EXPLORER:
-//			iDriver = new InternetExplorerBrowserDriver();
-//			iDriver.setBrowserDriverGlobalSyetemProperty();
-//			iDriver.instantiateBrowserDriver();
+			iDriver = new InternetExplorerBrowserDriver();
+			iDriver.setBrowserDriverGlobalSyetemProperty();
+			iDriver.instantiateBrowserDriver();
 			break;
 		default:
 			LOGGER.info("BROWSER NOT SUPPORTED");
