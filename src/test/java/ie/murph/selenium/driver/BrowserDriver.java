@@ -84,7 +84,7 @@ public class BrowserDriver{
 	private void setInternetExplorerDriverGlobalSyetemProperty() {
 		LOGGER.info("++setInternetExplorerDriverGlobalSyetemProperty()");
 		System.setProperty(URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_PROPERTY.toString(), URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_EXE_JAR_PATH.toString());
-		LOGGER.info("setInternetExplorerDriverGlobalSyetemProperty() " + System.getProperty(URLPathConstants.GECKO_WEB_DRIVER_PROPERTY.toString()));
+		LOGGER.info("setInternetExplorerDriverGlobalSyetemProperty() " + System.getProperty(URLPathConstants.INTERNET_EXPLORER_WEB_DRIVER_EXE_JAR_PATH.toString()));
 		LOGGER.info("setInternetExplorerDriverGlobalSyetemProperty() " + System.getProperties());
 	}
 

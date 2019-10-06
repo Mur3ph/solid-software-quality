@@ -29,6 +29,7 @@ public enum BrowserDriverFactoryEnum {
 			iDriver.instantiateBrowserDriver();
 			break;
 		case INTERNET_EXPLORER:
+//			iDriver = new InternetExplorerBrowserDriver();
 //			iDriver.setBrowserDriverGlobalSyetemProperty();
 //			iDriver.instantiateBrowserDriver();
 			break;
