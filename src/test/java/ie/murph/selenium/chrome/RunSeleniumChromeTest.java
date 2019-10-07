@@ -6,6 +6,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import test.java.ie.murph.selenium.driver.BrowserDriver;
+import test.java.ie.murph.selenium.driver.BrowserDriverFactoryEnum;
 import test.java.ie.murph.selenium.driver.singleton.Browser;
 import test.java.ie.murph.selenium.page.domain.Ebay;
 import test.java.ie.murph.selenium.page.domain.Myntra;
@@ -14,6 +15,7 @@ public class RunSeleniumChromeTest {
 
 	private static final Logger LOGGER = LogManager.getLogger(RunSeleniumChromeTest.class.getName());
 	private static final Scanner SCANNER = new Scanner(System.in);
+	private static BrowserDriverFactoryEnum browserDriverFactoryEnum;
 	private static BrowserDriver browserDriver;
 
 	public RunSeleniumChromeTest() {
