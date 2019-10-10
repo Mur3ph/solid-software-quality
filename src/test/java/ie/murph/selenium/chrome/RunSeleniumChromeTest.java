@@ -25,6 +25,8 @@ public class RunSeleniumChromeTest {
 		LOGGER.info("++main() thread");
 		
 		browserDriver = new BrowserDriver(Browser.GOOGLE_CHROME);
+		browserDriverFactoryEnum.createBrowserDriver(Browser.GOOGLE_CHROME);
+		
 		browserDriver.setBrowserToMaxSize();
 		browserDriver.clearBrowserCookies();
 		browserDriver.setBrowserToTimeoutInSeconds(40);
