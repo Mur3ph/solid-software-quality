@@ -43,7 +43,7 @@ public class RunSeleniumChromeTest {
 		browserDriver.closeBrowser();
 	}
 
-	// Method to ask the user if they want to try again.
+	// Method to ask the user if they want to try continue.
 	public static void askToContinue() throws InterruptedException {
 		System.out.println("Do you want to run test again: (y/n)");
 
