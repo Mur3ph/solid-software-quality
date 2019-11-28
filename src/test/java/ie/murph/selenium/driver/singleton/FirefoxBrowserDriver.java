@@ -13,7 +13,7 @@ public class FirefoxBrowserDriver implements IDriver{
     
     @Override
     public void setBrowserDriverGlobalSyetemProperty() {
-    	LOGGER.info("++setGeckoDriver()");
+    	LOGGER.info("++setBrowserDriverGlobalSyetemProperty()");
 		// if you didn't update the Path system variable to add the full directory path
 		// to the executable as above mentioned then doing this directly through code
 		// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver.exe");
@@ -24,7 +24,7 @@ public class FirefoxBrowserDriver implements IDriver{
     
     @Override
     public FirefoxDriver instantiateBrowserDriver() {
-    	LOGGER.info("++launchFireFoxBrowserDriver()");
+    	LOGGER.info("++instantiateBrowserDriver()");
 		return new FirefoxDriver();
 	}
 
